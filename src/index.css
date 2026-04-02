@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+}
+
+.editorial-shadow {
+    box-shadow: 0 24px 48px -12px rgba(25, 28, 27, 0.06);
+}
+
+.glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.tonal-volume {
+    transition: background-color 0.4s ease;
+}
+
+.glass-effect {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.bg-vitality-gradient {
+    background: linear-gradient(135deg, #00551a 0%, #007025 100%);
+}
+
+.tonal-volume-low {
+    background-color: #f2f4f2;
+}

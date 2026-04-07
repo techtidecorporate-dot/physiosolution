@@ -1,63 +1,54 @@
 import React from 'react';
 
 const Hero = () => {
-  return (
-    <section className="min-h-[600px] flex items-center bg-surface-bright overflow-hidden">
-
-      <div className="max-w-7xl mx-auto px-8 w-full pt-8 pb-20">
-
-        {/* GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
-
-          {/* LEFT CONTENT */}
-          <div className="flex flex-col justify-center space-y-8 max-w-xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary leading-tight">
-              Physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland
-            </h1>
-
-            <p className="text-lg lg:text-xl text-on-surface-variant leading-relaxed">
-              Physiotherapie bei Ihnen zu Hause – praktisch, unkompliziert und freundlich.
-            </p>
-
-            <p className="text-base text-on-surface-variant leading-relaxed">
-              Unser Versorgungskonzept ist Ihr Zuhause. Wir bieten physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland an. Die Behandlung erfolgt bei Ihnen zu Hause, im Alterszentrum oder im Pflegeheim.
-            </p>
-
-            <p className="text-base text-on-surface-variant leading-relaxed font-bold">
-              Sicher und sorgenfrei zur Physiotherapie – ohne öffentliche Verkehrsmittel, ohne Taxi und ohne eigenes Auto.
-            </p>
-
-            <p className="text-sm text-on-surface-variant leading-relaxed italic">
-              Physiotherapie bedeutet für uns, Menschen dort zu begleiten, wo ihr Leben stattfindet. Nicht isoliert im Therapieraum, sondern im vertrauten Umfeld, im Alltag und im sozialen Leben. Ziel ist es, Sicherheit, Selbstvertrauen und Lebensqualität wiederzuerlangen.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-6">
-              <button className="bg-[#166E41] text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl hover:scale-105 transition-all duration-300">
-                Termin vereinbaren
-              </button>
+    return (
+        <section className="relative min-h-[400px] lg:min-h-[550px] flex items-center overflow-hidden">
+            {/* Background Image with Precise Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    alt="Professionelle Physiotherapie Bülach"
+                    className="w-full h-full object-cover"
+                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1920"
+                />
+                <div className="absolute inset-0 bg-white/60 lg:bg-gradient-to-r lg:from-white/95 lg:via-white/80 lg:to-transparent"></div>
             </div>
-          </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md">
+            <div className="max-w-7xl mx-auto px-8 w-full relative z-10 pt-20 pb-20">
+                <div className="flex flex-col justify-center space-y-8 max-w-3xl">
 
-              {/* Background Shape (contained properly) */}
-              <div className="relative">
-                  <img
-                    alt="Professionelle Physiotherapie Domizilbehandlung"
-                    className="w-full h-auto object-cover rounded-2xl shadow-2xl"
-                    src="https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80&w=2070"
-                  />
-              </div>
+                    <div className="space-y-2">
+                        <span className="text-[#166E41] font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                            <span className="w-8 h-[2px] bg-[#166E41]"></span>
+                            Zürcher Unterland
+                        </span>
+                        <h1 className="text-6xl md:text-8xl font-black text-[#166E41] tracking-tighter leading-[0.9]">
+                            Physiotherapie <br />
+                            <span className="text-black">Zu Hause</span>
+                        </h1>
+                    </div>
 
+                    <p className="text-2xl md:text-3xl text-black/80 font-bold leading-tight">
+                        Praktisch. Unkompliziert. Menschlich.
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-8 pt-6">
+                        <a href="/contact" className="bg-[#166E41] text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl shadow-[#166E41]/20 hover:scale-105 transition-all">
+                            Termin vereinbaren
+                        </a>
+                        <div className="flex flex-col">
+                            <span className="text-xs font-bold text-[#166E41] uppercase tracking-widest">Gleich anrufen</span>
+                            <a href="tel:0783365540" className="text-2xl font-black text-black">078 336 55 40</a>
+                        </div>
+                    </div>
+
+                    {/* <p className="text-lg text-black/60 max-w-lg leading-relaxed pt-4"> */}
+                    {/* Wiedererlangung von Sicherheit und Lebensqualität direkt in Ihrem gewohnten Umfeld in Bülach und Umgebung. */}
+                    {/* </p> */}
+
+                </div>
             </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Hero;

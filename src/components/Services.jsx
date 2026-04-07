@@ -11,12 +11,12 @@ const Services = () => {
 
                 {/* Section Header */}
                 <div className="mb-24 text-center">
-                    <span className="text-[#166E41] font-black text-xs tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-4">
-                        <span className="w-12 h-[1px] bg-[#166E41]/20"></span>
+                    <span className="text-[#50CB61] font-black text-[10px] lg:text-xs tracking-[0.4em] uppercase mb-8 flex items-center justify-center gap-4">
+                        <span className="w-8 lg:w-12 h-[1px] bg-white/20"></span>
                         Fachbereiche
-                        <span className="w-12 h-[1px] bg-[#166E41]/20"></span>
+                        <span className="w-8 lg:w-12 h-[1px] bg-white/20"></span>
                     </span>
-                    <h2 className="text-4xl lg:text-7xl font-black text-white tracking-tighter leading-none mb-6">
+                    <h2 className="text-3xl lg:text-7xl font-black text-white tracking-tighter leading-[1.1] lg:leading-none mb-6 px-4">
                         Spezialisierte <br className="hidden md:block" />
                         <span className="text-[#22BB11]">Behandlungsfelder</span>
                     </h2>

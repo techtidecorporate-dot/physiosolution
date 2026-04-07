@@ -18,12 +18,12 @@ const Footer = () => {
 
           {/* Brand Presentation */}
           <div className="lg:col-span-4 flex flex-col gap-10">
-            <div className="flex flex-col gap-6">
-              <Link to="/" className="flex items-center gap-3 decoration-none hover:opacity-80 transition-opacity">
-                <img src={Logo} alt="Physio Solution Logo" className="h-16 w-auto object-contain" />
-                <div className="flex flex-col leading-none">
-                  <span className="text-2xl font-black tracking-tighter text-white uppercase">Physio</span>
-                  <span className="text-[15px] font-bold tracking-[0.2em] text-[#50CB61] uppercase">Solution</span>
+            <div className="flex flex-col gap-8">
+              <Link to="/" className="flex items-center gap-4 decoration-none hover:opacity-80 transition-opacity">
+                <img src={Logo} alt="Physio Solution Logo" className="h-12 lg:h-16 w-auto object-contain" />
+                <div className=" leading-none">
+                  <span className="text-xl lg:text-2xl font-black tracking-tighter text-white uppercase">Physio</span>
+                  <span className="text-xl lg:text-2xl font-bold text-[#50CB61] uppercase">Solution</span>
                 </div>
               </Link>
               <p className="text-white/70 text-lg leading-relaxed max-w-sm font-medium">

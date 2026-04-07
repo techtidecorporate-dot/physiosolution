@@ -31,11 +31,11 @@ const ContactPage = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="flex flex-col gap-2">
                                     <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Name</label>
-                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="Ihr voller Name" type="text"/>
+                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="Vorname Nachname" type="text"/>
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">E-Mail</label>
-                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="ihre@email.de" type="email"/>
+                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="beispiel@mail.ch" type="email"/>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ const ContactPage = () => {
                                 <textarea className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="Wie können wir Ihnen helfen?" rows="4"></textarea>
                             </div>
                             <button className="mt-4 bg-[#166E41] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl active:scale-[0.98] transition-all flex justify-center items-center gap-2" type="submit">
-                                Anfrage senden
+                                Nachricht senden
                                 <span className="material-symbols-outlined">send</span>
                             </button>
                         </form>

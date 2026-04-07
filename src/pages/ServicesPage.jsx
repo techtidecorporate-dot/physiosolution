@@ -150,8 +150,8 @@ const ServicesPage = () => {
                         Vereinbaren Sie noch <br />heute Ihren <span className="text-[#166E41]">Heimbesuch.</span>
                     </h2>
                     <div className="flex flex-wrap justify-center gap-10">
-                        <a href="/contact" className="bg-[#166E41] text-white px-14 py-7 rounded-[2rem] font-black text-xl shadow-2xl hover:scale-105 transition-all outline-none">
-                            Termin anfragen
+                        <a href="/book-visit" className="bg-[#166E41] text-white px-14 py-7 rounded-[2rem] font-black text-xl shadow-2xl hover:scale-105 transition-all outline-none">
+                            Termin vereinbaren
                         </a>
                         <div className="flex items-center gap-6">
                             <div className="w-14 h-14 rounded-full border-2 border-[#166E41] flex items-center justify-center">

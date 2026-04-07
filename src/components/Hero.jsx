@@ -18,7 +18,7 @@ const Hero = () => {
                 <div className="max-w-xl lg:max-w-2xl flex flex-col gap-6">
                     
                     {/* Main Title Block */}
-                    <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold leading-tight tracking-tight">
+                    <h1 className="text-3xl sm:text-3xl lg:text-[34px] font-bold leading-tight tracking-tight">
                         <span className="text-[#22BB11]">Physiotherapeutische</span>{' '}
                         <span className="text-white lg:text-[#444]">Domizilbehandlungen in</span><br/>
                         <span className="text-white lg:text-[#444]">Bülach und im Zürcher Unterland</span>
@@ -46,7 +46,7 @@ const Hero = () => {
                     {/* Button & Phone Block */}
                     <div className="flex flex-wrap items-center gap-6 pt-2">
                         <a 
-                            href="/contact" 
+                            href="/book-visit" 
                             className="bg-gradient-to-r from-[#50CB61] to-[#22BB11] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-xl hover:scale-105 transition-all duration-300"
                         >
                             Termin vereinbaren

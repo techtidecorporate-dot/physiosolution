@@ -2,7 +2,7 @@ import React from 'react';
 
 const ConceptPage = () => {
   return (
-    <div className="pt-24">
+    <div className="">
       {/* Hero Section */}
       <section className="relative min-h-[716px] flex items-center px-8 max-w-7xl mx-auto mb-20 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
@@ -79,7 +79,7 @@ const ConceptPage = () => {
             <div className="relative">
               <img
                 alt="Therapeut hilft einem Patienten beim Gehen in einem Park"
-                className="rounded-[2.5rem] shadow-2xl w-full object-cover aspect-video"
+                className="rounded-[2.5rem] shadow-2xl w-full object-top object-cover aspect-video"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiOOL_09blqSq877mEBNEGf7SY6z5KUzfbWJ-IgEaS0jhzeOTHbrE73KYaNWHiwMfh2ocGaYsidSSNVS09HcYh18cpKOeXHxH-qaYr4iAVgAR8YRrbTKEMyGJSBfdxUxHbrzaT8RAetyMs52jC1U1vc9Vh3bkv7IpAkb3QD6IuhmvuyAjcxGIE3fXgNR_89WTjG_2oViMk1obTEhs4RyU4MZOOnviCm28W_pU9ZkYEsvi8U2hnQ9s3XsUEk7r4YzkW2_KZLaihUtk"
               />
               <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-lg max-w-[200px]">

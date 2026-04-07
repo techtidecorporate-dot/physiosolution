@@ -7,20 +7,19 @@ const ConceptPage = () => {
       <section className="relative min-h-[716px] flex items-center px-8 max-w-7xl mx-auto mb-20 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
           <div className="md:col-span-7 z-10">
-            <span className="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">The Methodology</span>
+            <span className="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">Die Methodik</span>
             <h1 className="text-5xl md:text-7xl font-bold text-primary tracking-tighter leading-tight mb-8">
-              CONCEPT – Physiotherapy where your life takes place.
+              KONZEPT – Physiotherapie dort, wo Ihr Leben stattfindet.
             </h1>
             <p className="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
-              Precision in movement, integrated within your natural environment. We transcend clinical boundaries to meet you where healing truly happens.
+              Präzision in der Bewegung, integriert in Ihre natürliche Umgebung. Wir überschreiten klinische Grenzen, um Ihnen dort zu begegnen, wo Heilung wirklich geschieht.
             </p>
           </div>
           <div className="md:col-span-5 relative">
             <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
-                alt="Professional physiotherapist assisting a patient in a bright, modern living room setting"
+                alt="Professioneller Physiotherapeut unterstützt eine Patientin in einem hellen, modernen Wohnzimmer"
                 className="w-full h-full object-cover"
-                data-alt="Professional physiotherapist in green scrubs guiding an elderly patient through light balance exercises in a bright, sunlit modern apartment"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3-kg4Gg9e9M6FQ8YqycYSz0krG8ZkKsYQnpkO9afPTbedIYptHcFKU_9CCcTttYIRba0QiOtL3B70x4I-_tV_k3her6TTJCVxNNAT3I6CP7X338X2ZTHP2djECwbvwn2rIGfdPAMJqWbMAkq83u9mzaA7ig3UWjodClrNP8iBVjTLGDzbDg_67lkprZBLluvLNEZ8zxV0XJcYWGiAqG8AiQGyVf5MrMlrCCavR3jBpKKLAGZGj-PIH5X_VX_VlA2JXBjUuxg3ekPl"
               />
             </div>
@@ -36,13 +35,13 @@ const ConceptPage = () => {
           {/* Main Content Card */}
           <div className="md:col-span-2 md:row-span-2 bg-tertiary-container rounded-[2.5rem] p-12 flex flex-col justify-between text-on-tertiary-container relative overflow-hidden group">
             <div className="relative z-10">
-              <span className="material-symbols-outlined text-4xl mb-8" data-icon="home_health">home_health</span>
-              <h2 className="text-3xl font-bold mb-6 tracking-tight">Your home is more than just a space.</h2>
+              <span className="material-symbols-outlined text-4xl mb-8">home_health</span>
+              <h2 className="text-3xl font-bold mb-6 tracking-tight">Ihr Zuhause ist mehr als ein Raum.</h2>
               <p className="text-lg opacity-90 leading-relaxed mb-8">
-                It is your life, your memories, your familiar and known environment. Real life happens where you live – in your city, on the street, in the shopping center, or during a walk in the park.
+                Es ist Ihr Leben, Ihre Erinnerungen, Ihr vertrautes und bekanntes Umfeld. Das echte Leben spielt sich dort ab, wo Sie leben – in Ihrer Stadt, auf der Straße, im Einkaufszentrum oder bei einem Spaziergang im Park.
               </p>
               <p className="text-lg opacity-90 leading-relaxed">
-                Health affects not only the body, but also the mind and soul. For us, physiotherapy as a home visit therefore means more than just exercises in the living room or stairwell.
+                Gesundheit betrifft dabei nicht nur den Körper, sondern auch Geist und Seele. Physiotherapie als Domizilbehandlung bedeutet für uns deshalb mehr als nur Übungen im Wohnzimmer oder Treppenhaus.
               </p>
             </div>
             {/* Ambient Pattern */}
@@ -54,21 +53,21 @@ const ConceptPage = () => {
           </div>
           {/* Integration Card */}
           <div className="md:col-span-2 bg-surface-container rounded-[2.5rem] p-10 flex flex-col justify-center">
-            <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">Everyday Integration</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">Integration in den Alltag</h3>
             <p className="text-on-surface-variant leading-relaxed">
-              To return to a normal, self-determined life, we consciously integrate everyday situations into therapy. This creates safety, routine, and confidence – in daily life and in the social environment.
+              Um wieder in ein normales, selbstbestimmtes Leben zurückzufinden, integrieren wir alltagsnahe Situationen bewusst in die Therapie. So entstehen Sicherheit, Routine und Vertrauen – im Alltag und im sozialen Umfeld.
             </p>
           </div>
           {/* Recovery Context Card */}
           <div className="md:col-span-1 bg-surface-container-lowest rounded-[2.5rem] p-8 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500">
-            <span className="material-symbols-outlined text-secondary text-3xl mb-4" data-icon="stairs">stairs</span>
-            <h4 className="font-bold text-lg mb-2">Practical Path</h4>
-            <p className="text-sm text-on-surface-variant">Regaining confidence in your own four walls and beyond.</p>
+            <span className="material-symbols-outlined text-secondary text-3xl mb-4">stairs</span>
+            <h4 className="font-bold text-lg mb-2">Praktischer Weg</h4>
+            <p className="text-sm text-on-surface-variant">Wiedergewinnung von Sicherheit in den eigenen vier Wänden und darüber hinaus.</p>
           </div>
           {/* Challenge Card */}
           <div className="md:col-span-1 bg-primary text-white rounded-[2.5rem] p-8 flex flex-col justify-between">
-            <p className="text-sm font-medium opacity-80 uppercase tracking-widest">The Focus</p>
-            <p className="text-xl font-bold leading-tight">Beyond classic rehabilitation exercises.</p>
+            <p className="text-sm font-medium opacity-80 uppercase tracking-widest">Der Fokus</p>
+            <p className="text-xl font-bold leading-tight">Über die klassische Rehabilitation hinaus.</p>
           </div>
         </div>
       </section>
@@ -79,47 +78,46 @@ const ConceptPage = () => {
           <div className="order-2 md:order-1">
             <div className="relative">
               <img
-                alt="Therapist helping a patient walk in an outdoor park setting"
+                alt="Therapeut hilft einem Patienten beim Gehen in einem Park"
                 className="rounded-[2.5rem] shadow-2xl w-full object-cover aspect-video"
-                data-alt="Physiotherapist supporting a patient during a guided walk in a lush green Swiss park with trees and mountains in the distance"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiOOL_09blqSq877mEBNEGf7SY6z5KUzfbWJ-IgEaS0jhzeOTHbrE73KYaNWHiwMfh2ocGaYsidSSNVS09HcYh18cpKOeXHxH-qaYr4iAVgAR8YRrbTKEMyGJSBfdxUxHbrzaT8RAetyMs52jC1U1vc9Vh3bkv7IpAkb3QD6IuhmvuyAjcxGIE3fXgNR_89WTjG_2oViMk1obTEhs4RyU4MZOOnviCm28W_pU9ZkYEsvi8U2hnQ9s3XsUEk7r4YzkW2_KZLaihUtk"
               />
               <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-lg max-w-[200px]">
                 <p className="text-xs font-bold text-secondary uppercase tracking-tighter mb-1">Reality Check</p>
-                <p className="text-sm text-on-surface-variant font-medium">Reintegration into society is often challenging.</p>
+                <p className="text-sm text-on-surface-variant font-medium">Der Weg zurück in die Gesellschaft ist oft herausfordernd.</p>
               </div>
             </div>
           </div>
           <div className="order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tighter mb-8 leading-tight">
-              Step by step and at your own pace.
+              Schritt für Schritt und in Ihrem Tempo.
             </h2>
             <div className="space-y-6 text-on-surface-variant text-lg">
               <p>
-                Especially after accidents, falls, or serious illnesses, the path back into society takes more than classic exercises. It requires practical experience in everyday life.
+                Gerade nach Unfällen, Stürzen oder schweren Erkrankungen braucht es mehr als klassische Übungen. Es braucht praktische Erfahrungen im Alltag.
               </p>
               <p className="font-semibold text-primary">
-                We support you in regaining confidence, trusting yourself to participate in life again, and reintegrating into your social environment.
+                Wir unterstützen Sie dabei, sich wieder sicher zu fühlen, sich zuzutrauen, am Leben teilzunehmen und sich wieder in Ihr soziales Umfeld einzubringen.
               </p>
             </div>
             <div className="mt-10 flex gap-4">
               <div className="flex items-center gap-3">
                 <span className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                  <span className="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                  <span className="material-symbols-outlined">check_circle</span>
                 </span>
-                <span className="text-sm font-bold">Safety</span>
+                <span className="text-sm font-bold">Sicherheit</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                  <span className="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                  <span className="material-symbols-outlined">check_circle</span>
                 </span>
                 <span className="text-sm font-bold">Routine</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                  <span className="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                  <span className="material-symbols-outlined">check_circle</span>
                 </span>
-                <span className="text-sm font-bold">Confidence</span>
+                <span className="text-sm font-bold">Vertrauen</span>
               </div>
             </div>
           </div>
@@ -130,13 +128,13 @@ const ConceptPage = () => {
 
       {/* CTA Section */}
       <section className="px-8 py-32 max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter mb-8">Ready to reclaim your path?</h2>
+        <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter mb-8">Bereit für Ihren Weg?</h2>
         <p className="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
-          Let's start your journey toward movement and independence in the environment you love most.
+          Lassen Sie uns gemeinsam den Weg zu mehr Bewegung und Selbstständigkeit in Ihrer gewohnten Umgebung beginnen.
         </p>
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <a className="bg-vitality-gradient text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all" href="#">Book a Consultation</a>
-          <a className="bg-surface-container-low text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-surface-container transition-all" href="#">Explore Services</a>
+          <a className="bg-vitality-gradient text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all" href="/contact">Termin anfragen</a>
+          <a className="bg-surface-container-low text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-surface-container transition-all" href="/services">Leistungen entdecken</a>
         </div>
       </section>
     </div>

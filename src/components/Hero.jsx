@@ -19,8 +19,20 @@ const Hero = () => {
               Physiotherapie bei Ihnen zu Hause – praktisch, unkompliziert und freundlich.
             </p>
 
+            <p className="text-base text-on-surface-variant leading-relaxed">
+              Unser Versorgungskonzept ist Ihr Zuhause. Wir bieten physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland an. Die Behandlung erfolgt bei Ihnen zu Hause, im Alterszentrum oder im Pflegeheim.
+            </p>
+
+            <p className="text-base text-on-surface-variant leading-relaxed font-bold">
+              Sicher und sorgenfrei zur Physiotherapie – ohne öffentliche Verkehrsmittel, ohne Taxi und ohne eigenes Auto.
+            </p>
+
+            <p className="text-sm text-on-surface-variant leading-relaxed italic">
+              Physiotherapie bedeutet für uns, Menschen dort zu begleiten, wo ihr Leben stattfindet. Nicht isoliert im Therapieraum, sondern im vertrauten Umfeld, im Alltag und im sozialen Leben. Ziel ist es, Sicherheit, Selbstvertrauen und Lebensqualität wiederzuerlangen.
+            </p>
+
             <div className="flex flex-wrap items-center gap-6">
-              <button className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition">
+              <button className="bg-[#166E41] text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl hover:scale-105 transition-all duration-300">
                 Termin vereinbaren
               </button>
             </div>
@@ -32,13 +44,11 @@ const Hero = () => {
 
               {/* Background Shape (contained properly) */}
               <div className="relative">
-                <div className="absolute inset-0 bg-secondary-container/20 rounded-3xl rotate-3 -z-10"></div>
-
-                <img
-                  alt="Therapy session"
-                  className="w-full h-auto object-contain rounded-xl shadow-xl"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCupnte-Tn2tLg0WXF5y65ZPdPECyC85f3Cp-yS8Xs13FyRAF-6FAbsV_aj6ejwZI4GKOM6G9f0yPbwk_Lu_mIMTtch7WUnO8A_sTWVqyboIjusllE5fBH-YNXYv35d7cQfJl-o29pJcTkF6boQTc2XG4FErRNIGTLUUDU32k1ykJ2uRmrdjaf2qoM1axPCWiQdH394IzXeD7J4m8FPOkMo8KXl4a5HLWYyYtRFW4-V1HNfCtTwl9x2Jhf_Bb1GQj2oj_c_qrwivuyU"
-                />
+                  <img
+                    alt="Professionelle Physiotherapie Domizilbehandlung"
+                    className="w-full h-auto object-cover rounded-2xl shadow-2xl"
+                    src="https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80&w=2070"
+                  />
               </div>
 
             </div>

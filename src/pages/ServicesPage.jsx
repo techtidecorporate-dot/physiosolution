@@ -43,9 +43,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">neurology</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Neurological conditions</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Neurologische Erkrankungen</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Behandlung von Erkrankungen des zentralen und peripheren Nervensystems. Fokus auf motorische Kontrolle und funktionelle Unabhängigkeit bei Schlaganfall oder MS.
+                                    Behandlung unter anderem bei Schlaganfall, Parkinson, Multipler Sklerose, neurologischen Ausfällen nach Unfällen oder Operationen sowie Geburtsgebrechen. Ziel ist die Verbesserung von Gangbild, Gleichgewicht, Koordination, Kraft und Selbstständigkeit im Alltag.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">
@@ -58,9 +58,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">balance</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Dizziness and vestibular disorders</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Schwindel- und vestibuläre Erkrankungen</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Spezialisierte Rehabilitation bei Schwindelbeschwerden und Gleichgewichtsstörungen. Systematische Diagnostik und gezieltes Vestibularistraining für Ihre Sicherheit.
+                                    Behandlung bei Lagerungsschwindel, vestibulären Funktionsstörungen, Gangunsicherheit, Schwindel nach Stürzen oder Infekten sowie Unsicherheit beim Drehen oder Gehen. Die Schwindeltherapie erfolgt alltagsnah – dort, wo Schwindel tatsächlich auftritt.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">
@@ -73,9 +73,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">immunology</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Oncological conditions and lymphology</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Onkologische Erkrankungen und Lymphologie</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Unterstützende Therapie während und nach onkologischen Behandlungen. Manuelle Lymphdrainage und Kompressionstherapie zur Ödemreduktion und Vitalitätssteigerung.
+                                    Behandlung bei Fatigue, Kraft- und Konditionsverlust, Lymphödemen, Bewegungseinschränkungen und Schmerzen nach Tumortherapien. Einsatz von manueller Lymphdrainage, Mobilisation und dosiertem Belastungsaufbau.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">
@@ -88,9 +88,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">elderly</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Geriatric conditions and high care needs</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Geriatrische Erkrankungen und hoher Pflegebedarf</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Erhalt der Mobilität und Sturzprävention im Alter. Ganzheitliche Betreuung für Patientinnen mit komplexem Pflegebedarf und Multimorbidität.
+                                    Behandlung bei Mobilitätsverlust im Alter, Sturzgefährdung, Bettlägerigkeit, Zuständen nach Krankenhausaufenthalten sowie Multimorbidität. Ergänzend Sturzprophylaxe, Kontrakturprophylaxe sowie unterstützende Maßnahmen zur Dekubitus- und Pneumonieprophylaxe.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">
@@ -103,9 +103,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">air</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Respiratory therapy</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Atemtherapie</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Optimierung der Atemfunktion bei chronischen Lungenerkrankungen (COPD, Asthma). Sekretmanagement und Atemmechanik-Training für mehr Lebensqualität.
+                                    Behandlung bei COPD, Asthma bronchiale, Lungenfibrose, Post-/Long-COVID sowie eingeschränkter Atemmechanik bei Immobilität. Ziel ist eine verbesserte Atemökonomie, mehr Belastbarkeit und Sicherheit im Alltag.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">
@@ -118,9 +118,9 @@ const ServicesPage = () => {
                                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <span className="material-symbols-outlined">healing</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Chronic wounds – supportive physiotherapy</h3>
+                                <h3 className="text-xl font-bold text-on-secondary-fixed mb-4">Chronische Wunden – begleitende Physiotherapie</h3>
                                 <p className="text-on-secondary-fixed-variant text-sm leading-relaxed">
-                                    Begleitende physiotherapeutische Massnahmen zur Wundheilungsförderung. Durchblutungsförderung und Druckentlastung als essentielle Pfeiler der Wundtherapie.
+                                    Unterstützung bei venösen und arteriellen Wunden, diabetischen Wunden, Wundheilungsstörungen, Bewegungseinschränkungen sowie Schonhaltungen und Folgeschmerzen. Fokus auf Mobilität, Durchblutung und Alltagssicherheit.
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-on-secondary-fixed-variant/10">

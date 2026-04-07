@@ -7,22 +7,22 @@ const AboutPage = () => {
       <section className="max-w-7xl mx-auto px-8 py-20 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
           <div className="inline-block px-4 py-1.5 rounded-full bg-secondary-container/30 text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-8">
-            Personal Profile
+            Persönliches Profil
           </div>
-          <h1 className="text-6xl md:text-8xl font-black text-primary tracking-tighter leading-none mb-10">
+          <h1 className="text-6xl md:text-8xl font-black text-[#166E41] tracking-tighter leading-[0.9] mb-10">
             Peter <br />Ulshöfer
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-2xl mb-12">
-            A physiotherapist with 25 years of professional experience, dedicated to home-based care in the Zürcher Unterland and Bülach region.
+            Physiotherapeut mit 25 Jahren Berufserfahrung, spezialisiert auf Domizilbehandlungen im Zürcher Unterland und der Region Bülach.
           </p>
-          <div className="flex gap-4">
-            <div className="flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl">
-              <span className="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
-              <span className="text-sm font-bold text-on-surface">25+ Years Experience</span>
-            </div>
-            <div className="flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl">
-              <span className="material-symbols-outlined text-primary" data-icon="home_health">home_health</span>
-              <span className="text-sm font-bold text-on-surface">Home-Based Care</span>
+          <div className="flex flex-wrap gap-6 pt-4">
+            <button className="flex items-center gap-3 bg-[#166E41] text-white px-8 py-5 rounded-2xl shadow-xl hover:scale-105 transition-all">
+              <span className="material-symbols-outlined text-white">workspace_premium</span>
+              <span className="text-lg font-bold">25 Jahre Erfahrung</span>
+            </button>
+            <div className="flex items-center gap-3 bg-surface-container-low px-8 py-5 rounded-2xl border border-outline-variant/10">
+              <span className="material-symbols-outlined text-[#166E41]">home_health</span>
+              <span className="text-lg font-bold text-black">Domizilbehandlung</span>
             </div>
           </div>
         </div>
@@ -31,7 +31,6 @@ const AboutPage = () => {
             <img 
               alt="Peter Ulshöfer" 
               className="w-full h-full object-cover" 
-              data-alt="Professional headshot of a mature physiotherapist with a kind expression, wearing a clean white clinical polo, soft natural lighting, high-end Swiss aesthetic" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOUsOoxUAiS8fxi4jRoawpNJ72qeSqdaNRPVPA_Pc_dOTgr8DQh5BaYq8hRaa8eJaNBrYEUP6DeIKuyR9S60S5Anbz3_k9D_xLe73g2B1RMyPjvT0CG_hj5ZVbzxv9usFinP7294X8lOScWAt7gUDzHLAaiQtcwUehcUGpREMr5br6GiKLX-ypZWD-AktTd5gFRu_tC4ITwK7AkjoJl34Lk1vvv167Fb0mi1N91Ab7gJyzlmN2FVtf5mPzzd0ooGWsiqVwcW5qe36-" 
             />
           </div>
@@ -47,20 +46,25 @@ const AboutPage = () => {
             {/* Bio Text */}
             <div className="md:col-span-2 bg-surface-container-lowest p-12 rounded-[2rem] shadow-sm flex flex-col justify-between">
               <div>
-                <h2 className="text-3xl font-bold text-primary tracking-tight mb-8">My Approach</h2>
-                <p className="text-lg text-on-surface-variant leading-relaxed mb-6">
-                  My work is characterized by a calm, structured, and practical approach – especially when dealing with complex conditions and sensitive life situations. For many years, I have supported people in the Zürcher Unterland through home-based physiotherapy, ensuring care is delivered in the comfort of their own environment.
-                </p>
-                <p className="text-lg text-on-surface-variant leading-relaxed">
-                  Precision in movement is not just a slogan; it is the foundation of my clinical practice, honed over a quarter-century of dedicated professional service.
-                </p>
+                <h2 className="text-4xl font-bold text-[#166E41] tracking-tight mb-8">Mein Ansatz &amp; Philosophie</h2>
+                <div className="space-y-6 text-xl text-black leading-[1.6]">
+                  <p>
+                    Meine Arbeit zeichnet sich durch ein ruhiges, strukturiertes und alltagsnahes Vorgehen aus – besonders im Umgang mit komplexen Erkrankungen und sensiblen Lebenssituationen.
+                  </p>
+                  <p>
+                    Seit vielen Jahren begleite ich Menschen im Zürcher Unterland durch physiotherapeutische Hausbesuche und stelle sicher, dass die Versorgung in der vertrauten Umgebung erfolgt.
+                  </p>
+                  <p className="font-medium italic border-l-4 border-[#166E41] pl-6 py-2">
+                    &bdquo;Präzision in der Bewegung ist nicht nur ein Slogan; sie ist das Fundament meiner klinischen Praxis, geschärft in über einem Vierteljahrhundert engagierter Berufstätigkeit.&ldquo;
+                  </p>
+                </div>
               </div>
               <div className="mt-12 flex items-center gap-4 border-t border-outline-variant/20 pt-8">
                 <div className="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+                  <span className="material-symbols-outlined text-primary">location_on</span>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-outline uppercase tracking-widest">Primary Service Area</p>
+                  <p className="text-xs font-bold text-outline uppercase tracking-widest">Haupt-Einsatzgebiet</p>
                   <p className="text-on-surface font-semibold">Bülach &amp; Zürcher Unterland</p>
                 </div>
               </div>
@@ -68,14 +72,14 @@ const AboutPage = () => {
             {/* Side Stats/Info */}
             <div className="flex flex-col gap-8">
               <div className="bg-primary-container p-10 rounded-[2rem] text-on-primary-container flex-1">
-                <span className="material-symbols-outlined text-4xl mb-4" data-icon="clinical_notes">clinical_notes</span>
-                <h3 className="text-xl font-bold mb-4">Precision First</h3>
-                <p className="text-sm opacity-90 leading-relaxed">Structured methodology tailored to the specific anatomical and physiological needs of each patient.</p>
+                <span className="material-symbols-outlined text-4xl mb-4">clinical_notes</span>
+                <h3 className="text-xl font-bold mb-4">Präzision Zuerst</h3>
+                <p className="text-sm opacity-90 leading-relaxed">Strukturierte Methodik, die auf die spezifischen anatomischen und physiologischen Bedürfnisse jedes Patienten zugeschnitten ist.</p>
               </div>
               <div className="bg-secondary-container p-10 rounded-[2rem] text-on-secondary-container flex-1">
-                <span className="material-symbols-outlined text-4xl mb-4" data-icon="psychology">psychology</span>
-                <h3 className="text-xl font-bold mb-4">Sensitive Care</h3>
-                <p className="text-sm opacity-90 leading-relaxed">Navigating complex life situations with professionalism and empathy.</p>
+                <span className="material-symbols-outlined text-4xl mb-4">psychology</span>
+                <h3 className="text-xl font-bold mb-4">Sensible Betreuung</h3>
+                <p className="text-sm opacity-90 leading-relaxed">Bewältigung komplexer Lebenssituationen mit Professionalität und Empathie.</p>
               </div>
             </div>
           </div>
@@ -84,30 +88,28 @@ const AboutPage = () => {
 
       {/* Areas of Focus (Editorial Grid) */}
       <section className="max-w-7xl mx-auto px-8 py-32">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-          <div className="max-w-xl">
-            <h2 className="text-5xl font-black text-primary tracking-tight mb-6">Specialized Expertise</h2>
-            <p className="text-on-surface-variant text-lg">My clinical focus areas allow for comprehensive support across a wide range of therapeutic needs.</p>
-          </div>
-          <div className="h-px bg-outline-variant/30 flex-1 hidden md:block mx-12 mb-6"></div>
-          <div className="text-right">
-            <span className="text-8xl font-thin text-surface-container-highest">08</span>
-          </div>
+        <div className="mb-24 text-center">
+          <span className="text-[#166E41] font-label text-sm tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-4">
+            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span></span>
+            Fachliche Expertise
+            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span></span>
+          </span>
+          <h2 className="text-5xl lg:text-7xl font-black text-[#166E41] tracking-tighter">Spezialgebiete</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {/* Focus Items */}
           {[
-            { icon: 'neurology', title: 'Neurology' },
-            { icon: 'settings_accessibility', title: 'Dizziness Therapy' },
-            { icon: 'air', title: 'Respiratory Therapy' },
-            { icon: 'elderly', title: 'Geriatrics' },
-            { icon: 'water_drop', title: 'Lymphology' },
-            { icon: 'medical_services', title: 'Oncology' },
-            { icon: 'healing', title: 'Chronic Wounds' },
-            { icon: 'front_loader', title: 'High Care Needs' },
+            { icon: 'neurology', title: 'Neurologie' },
+            { icon: 'settings_accessibility', title: 'Schwindeltherapie' },
+            { icon: 'air', title: 'Atemtherapie' },
+            { icon: 'elderly', title: 'Geriatrie' },
+            { icon: 'water_drop', title: 'Lymphologie' },
+            { icon: 'medical_services', title: 'Onkologie' },
+            { icon: 'healing', title: 'Chronische Wunden' },
+            { icon: 'front_loader', title: 'Hoher Pflegebedarf' },
           ].map((item, idx) => (
             <div key={idx} className="group bg-surface-container-low hover:bg-white p-8 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-              <span className="material-symbols-outlined text-primary mb-6 text-3xl" data-icon={item.icon}>{item.icon}</span>
+              <span className="material-symbols-outlined text-primary mb-6 text-3xl">{item.icon}</span>
               <h4 className="font-bold text-on-surface">{item.title}</h4>
             </div>
           ))}
@@ -122,11 +124,11 @@ const AboutPage = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-fixed opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
           
           <div className="relative z-10 text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">Ready to Begin Your Recovery at Home?</h2>
-            <p className="text-on-tertiary-container text-lg mb-12">Experience professional, structured physiotherapy in your own environment. Contact me today for a consultation in the Bülach area.</p>
-            <a className="inline-flex items-center gap-4 bg-primary px-10 py-5 rounded-2xl text-white font-bold text-lg hover:scale-105 transition-transform" href="#">
-              Schedule a Visit
-              <span className="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">Bereit, Ihre Genesung zu Hause zu beginnen?</h2>
+            <p className="text-on-tertiary-container text-lg mb-12">Erleben Sie professionelle, strukturierte Physiotherapie in Ihrer eigenen Umgebung. Kontaktieren Sie mich noch heute für eine Beratung im Raum Bülach.</p>
+            <a className="inline-flex items-center gap-4 bg-primary px-10 py-5 rounded-2xl text-white font-bold text-lg hover:scale-105 transition-transform" href="/contact">
+              Besuch vereinbaren
+              <span className="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
         </div>

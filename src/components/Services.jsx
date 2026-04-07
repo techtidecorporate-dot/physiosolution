@@ -6,9 +6,13 @@ const Services = () => {
       <div className="absolute top-0 right-0 w-80 h-80 border-4 border-primary-fixed/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-primary-fixed/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
       <div className="max-w-7xl mx-auto px-8">
-        <div className="mb-20 text-center md:text-left">
-          <span className="text-primary-fixed font-label text-sm tracking-[0.2em] uppercase mb-4 block">Meine Dienstleistungen</span>
-          <h2 className="text-4xl lg:text-5xl font-headline font-bold text-white tracking-tight">Leistungen &amp; Spezialgebiete</h2>
+        <div className="mb-24 text-center">
+          <span className="text-white font-label text-sm tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-4">
+            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span></span>
+            Meine Fachbereiche
+            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span></span>
+          </span>
+          <h2 className="text-5xl lg:text-7xl font-headline font-black text-white tracking-tighter">Spezialisierte <br className="hidden md:block"/>Behandlungsfelder</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
@@ -16,9 +20,9 @@ const Services = () => {
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
               <span className="material-symbols-outlined text-white text-3xl">neurology</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Neurological conditions</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Neurologische Erkrankungen</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Gezielte Rehabilitation bei Erkrankungen des Nervensystems wie Schlaganfall, Parkinson oder MS direkt in Ihrem gewohnten Umfeld.
+              Behandlung unter anderem bei Schlaganfall, Parkinson, Multipler Sklerose, neurologischen Ausfällen nach Unfällen oder Operationen sowie Geburtsgebrechen. Ziel ist die Verbesserung von Gangbild, Gleichgewicht, Koordination, Kraft und Selbstständigkeit im Alltag.
             </p>
           </div>
           {/* Card 2 */}
@@ -26,19 +30,19 @@ const Services = () => {
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
               <span className="material-symbols-outlined text-white text-3xl">balance</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Dizziness and vestibular disorders</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Schwindel &amp; Gleichgewicht</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Spezialisierte Therapie bei Schwindelsymptomen und Gleichgewichtsstörungen zur Erhöhung Ihrer Sicherheit im Alltag.
+              Behandlung bei Lagerungsschwindel, vestibulären Funktionsstörungen, Gangunsicherheit, Schwindel nach Stürzen oder Infekten sowie Unsicherheit beim Drehen oder Gehen. Die Schwindeltherapie erfolgt alltagsnah – dort, wo Schwindel tatsächlich auftritt.
             </p>
           </div>
           {/* Card 3 */}
           <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">health_and_safety</span>
+              <span className="material-symbols-outlined text-white text-3xl">clinical_notes</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Oncological conditions</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Onkologie &amp; Lymphologie</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Begleitende physiotherapeutische Unterstützung während und nach Krebstherapien zur Erhaltung der Lebensqualität.
+              Behandlung bei Fatigue, Kraft- und Konditionsverlust, Lymphödemen, Bewegungseinschränkungen und Schmerzen nach Tumortherapien. Einsatz von manueller Lymphdrainage, Mobilisation und dosiertem Belastungsaufbau.
             </p>
           </div>
           {/* Card 4 */}
@@ -46,9 +50,9 @@ const Services = () => {
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
               <span className="material-symbols-outlined text-white text-3xl">elderly</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Geriatric conditions</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Geriatrie &amp; Pflege</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Individuelle Mobilitätsförderung und Sturzprophylaxe für ein selbstbestimmtes Leben im Alter in den eigenen vier Wänden.
+              Behandlung bei Mobilitätsverlust im Alter, Sturzgefährdung, Bettlägerigkeit, Zuständen nach Krankenhausaufenthalten sowie Multimorbidität. Ergänzend Sturzprophylaxe, Kontrakturprophylaxe sowie unterstützende Maßnahmen zur Dekubitus- und Pneumonieprophylaxe.
             </p>
           </div>
           {/* Card 5 */}
@@ -56,9 +60,9 @@ const Services = () => {
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
               <span className="material-symbols-outlined text-white text-3xl">respiratory_rate</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Respiratory therapy</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Atemtherapie</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Atemphysiotherapie zur Linderung von Atembeschwerden und Verbesserung der Lungenfunktion bei chronischen Erkrankungen.
+              Behandlung bei COPD, Asthma bronchiale, Lungenfibrose, Post-/Long-COVID sowie eingeschränkter Atemmechanik bei Immobilität. Ziel ist eine verbesserte Atemökonomie, mehr Belastbarkeit und Sicherheit im Alltag.
             </p>
           </div>
           {/* Card 6 */}
@@ -66,9 +70,9 @@ const Services = () => {
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
               <span className="material-symbols-outlined text-white text-3xl">healing</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Chronic wounds</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Chronische Wunden</h3>
             <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Unterstützende Massnahmen zur Durchblutungsförderung und Beweglichkeit bei der Heilung langwieriger Wunden.
+              Unterstützung bei venösen und arteriellen Wunden, diabetischen Wunden, Wundheilungsstörungen, Bewegungseinschränkungen sowie Schonhaltungen und Folgeschmerzen. Fokus auf Mobilität, Durchblutung und Alltagssicherheit.
             </p>
           </div>
         </div>

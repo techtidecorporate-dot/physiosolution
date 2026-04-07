@@ -31,14 +31,43 @@ const BookVisitPage = () => {
                                 <input className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" placeholder="z.B. Dienstag Vormittag" type="text"/>
                             </div>
                         </div>
-                        <div className="space-y-2">
+                        <div className="space-y-4 py-4 border-y border-outline-variant/10">
+                            <label className="text-sm font-bold text-on-surface flex items-center gap-2">
+                                <span className="material-symbols-outlined text-primary">description</span>
+                                Liegt eine ärztliche Verordnung vor?
+                            </label>
+                            <div className="flex gap-8 px-1">
+                                <label className="flex items-center gap-2 cursor-pointer group">
+                                    <input type="radio" name="verordnung" className="w-5 h-5 accent-[#166E41]" value="ja" />
+                                    <span className="font-medium">Ja</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer group">
+                                    <input type="radio" name="verordnung" className="w-5 h-5 accent-[#166E41]" value="nein" defaultChecked />
+                                    <span className="font-medium">Nein</span>
+                                </label>
+                            </div>
+                            <div className="mt-4 px-1">
+                                <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant block mb-2">Verordnung hochladen (optional)</label>
+                                <div className="relative group">
+                                    <input type="file" className="block w-full text-sm text-on-surface-variant
+                                        file:mr-4 file:py-2.5 file:px-4
+                                        file:rounded-xl file:border-0
+                                        file:text-sm file:font-bold
+                                        file:bg-[#166E41]/10 file:text-[#166E41]
+                                        hover:file:bg-[#166E41]/20
+                                        transition-all cursor-pointer" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="space-y-2 pt-2">
                             <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Gewünschte Leistung</label>
-                            <select className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all">
-                                <option>Neurologie</option>
-                                <option>Geriatrie</option>
-                                <option>Schwindeltherapie</option>
-                                <option>Orthopädie</option>
-                                <option>Manuelle Lymphdrainage</option>
+                            <select className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium">
+                                <option>Neurologische Erkrankungen</option>
+                                <option>Geriatrie &amp; Pflege</option>
+                                <option>Schwindel &amp; Gleichgewicht</option>
+                                <option>Atemtherapie</option>
+                                <option>Chronische Wunden</option>
+                                <option>Sonstiges</option>
                             </select>
                         </div>
                         <div className="space-y-2">
@@ -56,7 +85,7 @@ const BookVisitPage = () => {
                             </div>
                             <div>
                                 <p className="text-xs font-bold uppercase text-on-surface-variant">Telefon</p>
-                                <a className="text-primary font-bold hover:underline" href="tel:+41000000000">+41 00 000 00 00</a>
+                                <a className="text-primary font-bold hover:underline" href="tel:0783365540">078 336 55 40</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
@@ -65,7 +94,7 @@ const BookVisitPage = () => {
                             </div>
                             <div>
                                 <p className="text-xs font-bold uppercase text-on-surface-variant">E-Mail</p>
-                                <a className="text-primary font-bold hover:underline" href="mailto:info@physiosolution.ch">info@physiosolution.ch</a>
+                                <a className="text-primary font-bold hover:underline" href="mailto:info@physiosolutions.ch">info@physiosolutions.ch</a>
                             </div>
                         </div>
                     </div>

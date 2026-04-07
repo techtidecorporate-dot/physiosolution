@@ -12,7 +12,7 @@ const About = () => {
                             className="w-full h-full object-cover object-top"
                         />
                         <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#50CB61] via-[#22BB11] to-[#166E41] rounded-3xl p-5 text-white shadow-2xl">
-                            <p className="text-3xl font-bold">15+</p>
+                            <p className="text-3xl font-bold">25</p>
                             <p className="text-sm mt-1">Jahre Erfahrung</p>
                         </div>
                     </div>
@@ -22,8 +22,8 @@ const About = () => {
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-white">Peter Ulshöfer</h2>
                         <p className="text-cyan-100 font-medium text-lg">Dipl. Physiotherapeut HF</p>
 
-                        <p className="text-cyan-100 leading-relaxed">Mit über 15 Jahren Erfahrung in der ambulanten und stationären Rehabilitation bringe ich klinische Präzision und persönliche Fürsorge direkt zu Ihnen nach Hause. Mein Fokus liegt auf ganzheitlicher, patientenzentrierter Therapie.</p>
-                        <p className="text-cyan-100 leading-relaxed">Als Spezialist für Domizilbehandlungen im Zürcher Unterland kenne ich die besonderen Bedürfnisse meiner Patientinnen und Patienten und passe jede Therapie individuell an deren Lebensumstände an.</p>
+                        <p className="text-cyan-100 leading-relaxed">Ich bin Physiotherapeut mit 25 Jahren Berufserfahrung und begleite seit vielen Jahren Menschen im Zürcher Unterland, insbesondere in Bülach, im Rahmen von Physiotherapie im häuslichen Umfeld.</p>
+                        <p className="text-cyan-100 leading-relaxed">Meine Schwerpunkte liegen in der Neurologie, Schwindeltherapie, Atemtherapie, Geriatrie, Lymphologie, Onkologie sowie in der Begleitung von Menschen mit chronischen Wunden und hohem Pflegebedarf. Ich arbeite ruhig, strukturiert und alltagsnah – besonders bei komplexen Erkrankungen und sensiblen Lebenssituationen.</p>
 
                         <div className="grid grid-cols-2 gap-3 pt-4">
                             {[

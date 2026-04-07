@@ -11,23 +11,23 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 w-full z-50 bg-[#50CB61] backdrop-blur-xl opacity-90 shadow-lg shadow-green-900/10">
+    <header className="sticky top-0 w-full z-50 bg-[#166E41] shadow-lg">
       <div className="flex justify-between items-center px-8 py-4 max-w-full">
         <Link to="/" className="flex items-center gap-3 text-xl font-bold tracking-tighter text-white">
-          <img src={Logo} alt="Physio Solution Logo" className="h-12 w-auto object-contain" />
+          <img src={Logo} alt="PhysioHealth Logo" className="h-12 w-auto object-contain" />
 
         </Link>
         <nav className="hidden lg:flex items-center space-x-8 font-manrope font-semibold tracking-tight text-sm uppercase">
-          <Link className={getLinkClass('/')} to="/">Home</Link>
-          <Link className={getLinkClass('/concept')} to="/concept">Concept</Link>
-          <Link className={getLinkClass('/services')} to="/services">Services</Link>
-          <Link className={getLinkClass('/for-relatives')} to="/for-relatives">For Relatives</Link>
-          <Link className={getLinkClass('/about')} to="/about">About Me</Link>
-          <Link className={getLinkClass('/contact')} to="/contact">Contact</Link>
+          <Link className={getLinkClass('/')} to="/">Startseite</Link>
+          <Link className={getLinkClass('/concept')} to="/concept">Konzept</Link>
+          <Link className={getLinkClass('/services')} to="/services">Leistungen</Link>
+          <Link className={getLinkClass('/for-relatives')} to="/for-relatives">Für Angehörige</Link>
+          <Link className={getLinkClass('/about')} to="/about">Über mich</Link>
+          <Link className={getLinkClass('/contact')} to="/contact">Kontakt</Link>
         </nav>
         <div className="flex items-center space-x-6">
-          <Link to="/book-visit" className="bg-white text-[#50CB61] px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-90 transition-all scale-95 duration-200 ease-in-out active:opacity-80 inline-block text-center whitespace-nowrap">
-            Book Visit
+          <Link to="/book-visit" className="bg-white text-[#166E41] px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all duration-200">
+            Termin vereinbaren
           </Link>
         </div>
       </div>

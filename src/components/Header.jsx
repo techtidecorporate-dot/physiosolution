@@ -13,9 +13,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 w-full z-50 bg-[#166E41] shadow-lg">
       <div className="flex justify-between items-center px-8 py-4 max-w-full">
-        <Link to="/" className="flex items-center gap-3 text-xl font-bold tracking-tighter text-white">
-          <img src={Logo} alt="PhysioHealth Logo" className="h-12 w-auto object-contain" />
-
+        <Link to="/" className="flex items-center gap-3 decoration-none">
+          <img src={Logo} alt="Physio Solution Logo" className="h-12 w-auto object-contain" />
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-black tracking-tighter text-white">PHYSIO</span>
+            <span className="text-sm font-bold tracking-[0.2em] text-[#50CB61]">SOLUTION</span>
+          </div>
         </Link>
         <nav className="hidden lg:flex items-center space-x-8 font-manrope font-semibold tracking-tight text-sm uppercase">
           <Link className={getLinkClass('/')} to="/">Startseite</Link>

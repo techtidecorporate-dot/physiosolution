@@ -2,49 +2,68 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[400px] lg:min-h-[550px] flex items-center overflow-hidden">
-            {/* Background Image with Precise Overlay */}
+        <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center overflow-hidden font-manrope">
+            {/* Background Image Wrapper */}
             <div className="absolute inset-0 z-0">
                 <img
-                    alt="Professionelle Physiotherapie Bülach"
-                    className="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1920"
+                    alt="Professionelle Physiotherapie Domizilbehandlung"
+                    className="w-full h-full object-cover object-center lg:object-right"
+                    src="/images/herobg.jpeg"
                 />
-                <div className="absolute inset-0 bg-white/60 lg:bg-gradient-to-r lg:from-white/95 lg:via-white/80 lg:to-transparent"></div>
+                {/* Subtle light overlay on the left for text readability, keeping the right clear */}
+                <div className="absolute inset-0 bg-white/40 lg:bg-gradient-to-r lg:from-white/80 lg:via-white/40 lg:to-transparent"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-8 w-full relative z-10 pt-20 pb-20">
-                <div className="flex flex-col justify-center space-y-8 max-w-3xl">
+            <div className="max-w-7xl mx-auto px-8 w-full relative z-10 pt-12 pb-12">
+                <div className="max-w-xl lg:max-w-2xl flex flex-col gap-6">
+                    
+                    {/* Main Title Block */}
+                    <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold leading-tight tracking-tight">
+                        <span className="text-[#22BB11]">Physiotherapeutische</span>{' '}
+                        <span className="text-white lg:text-[#444]">Domizilbehandlungen in</span><br/>
+                        <span className="text-white lg:text-[#444]">Bülach und im Zürcher Unterland</span>
+                    </h1>
 
-                    <div className="space-y-2">
-                        <span className="text-[#166E41] font-bold text-sm uppercase tracking-widest flex items-center gap-2">
-                            <span className="w-8 h-[2px] bg-[#166E41]"></span>
-                            Zürcher Unterland
-                        </span>
-                        <h1 className="text-6xl md:text-8xl font-black text-[#166E41] tracking-tighter leading-[0.9]">
-                            Physiotherapie <br />
-                            <span className="text-black">Zu Hause</span>
-                        </h1>
+                    {/* Paragraphs with precise styling */}
+                    <div className="space-y-4 text-[13px] sm:text-[14px] lg:text-[15px] font-bold leading-snug">
+                        <p className="italic text-black">
+                            Physiotherapie bei Ihnen zu Hause – praktisch, unkompliziert und freundlich.
+                        </p>
+                        
+                        <p className="text-black">
+                            Unser Versorgungskonzept ist Ihr Zuhause. Wir bieten physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland an. Die Behandlung erfolgt bei Ihnen zu Hause, im Alterszentrum oder im Pflegeheim.
+                        </p>
+
+                        <p className="text-black">
+                            Sicher und sorgenfrei zur Physiotherapie – ohne öffentliche Verkehrsmittel, ohne Taxi und ohne eigenes Auto. Unsere Aufmerksamkeit gilt Ihrer Gesundheit im gewohnten Umfeld und der Wiederherstellung Ihrer Alltagsfähigkeit – für ein gutes Gefühl bei Ihnen als Patient:in und für Ihre Angehörigen.
+                        </p>
+
+                        <p className="text-black">
+                            Physiotherapie bedeutet für uns, Menschen dort zu begleiten, wo ihr Leben stattfindet. Nicht isoliert im Therapieraum, sondern im vertrauten Umfeld, im Alltag und im sozialen Leben. Ziel ist es, Sicherheit, Selbstvertrauen und Lebensqualität wiederzuerlangen.
+                        </p>
                     </div>
 
-                    <p className="text-2xl md:text-3xl text-black/80 font-bold leading-tight">
-                        Praktisch. Unkompliziert. Menschlich.
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-8 pt-6">
-                        <a href="/contact" className="bg-[#166E41] text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl shadow-[#166E41]/20 hover:scale-105 transition-all">
+                    {/* Button & Phone Block */}
+                    <div className="flex flex-wrap items-center gap-6 pt-2">
+                        <a 
+                            href="/contact" 
+                            className="bg-gradient-to-r from-[#50CB61] to-[#22BB11] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-xl hover:scale-105 transition-all duration-300"
+                        >
                             Termin vereinbaren
                         </a>
-                        <div className="flex flex-col">
-                            <span className="text-xs font-bold text-[#166E41] uppercase tracking-widest">Gleich anrufen</span>
-                            <a href="tel:0783365540" className="text-2xl font-black text-black">078 336 55 40</a>
+                        
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full border-2 border-[#22BB11] flex items-center justify-center">
+                                <span className="material-symbols-outlined text-[#22BB11] text-2xl font-bold">call</span>
+                            </div>
+                            <a 
+                                href="tel:0783365540" 
+                                className="text-lg lg:text-xl font-black text-black tracking-tighter"
+                            >
+                                078 336 55 40
+                            </a>
                         </div>
                     </div>
-
-                    {/* <p className="text-lg text-black/60 max-w-lg leading-relaxed pt-4"> */}
-                    {/* Wiedererlangung von Sicherheit und Lebensqualität direkt in Ihrem gewohnten Umfeld in Bülach und Umgebung. */}
-                    {/* </p> */}
-
                 </div>
             </div>
         </section>

@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from '../../public/images/img3.jpeg'
 
 const AboutPage = () => {
   return (
-    <div className="pt-24">
+    <div className=" ">
       {/* Hero Section: Editorial Profile */}
       <section className="max-w-7xl mx-auto px-8 py-20 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
@@ -28,10 +29,10 @@ const AboutPage = () => {
         </div>
         <div className="lg:col-span-5 relative">
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-            <img 
-              alt="Peter Ulshöfer" 
-              className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOUsOoxUAiS8fxi4jRoawpNJ72qeSqdaNRPVPA_Pc_dOTgr8DQh5BaYq8hRaa8eJaNBrYEUP6DeIKuyR9S60S5Anbz3_k9D_xLe73g2B1RMyPjvT0CG_hj5ZVbzxv9usFinP7294X8lOScWAt7gUDzHLAaiQtcwUehcUGpREMr5br6GiKLX-ypZWD-AktTd5gFRu_tC4ITwK7AkjoJl34Lk1vvv167Fb0mi1N91Ab7gJyzlmN2FVtf5mPzzd0ooGWsiqVwcW5qe36-" 
+            <img
+              alt="Peter Ulshöfer"
+              className="w-full h-full object-cover"
+              src={Image}
             />
           </div>
           <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-full bg-tertiary-container/10 blur-3xl -z-10"></div>
@@ -122,7 +123,7 @@ const AboutPage = () => {
           {/* Abstract Pattern Decorative */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-fixed opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-fixed opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-          
+
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">Bereit, Ihre Genesung zu Hause zu beginnen?</h2>
             <p className="text-on-tertiary-container text-lg mb-12">Erleben Sie professionelle, strukturierte Physiotherapie in Ihrer eigenen Umgebung. Kontaktieren Sie mich noch heute für eine Beratung im Raum Bülach.</p>

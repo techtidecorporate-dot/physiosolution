@@ -2,7 +2,7 @@ import React from 'react';
 
 const RelativesPage = () => {
     return (
-        <div className="pt-24 bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+        <div className="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
             {/* Hero Section */}
             <section className="relative px-8 py-20 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -27,7 +27,7 @@ const RelativesPage = () => {
                         {/* Abstract Circular Pattern Decoration */}
                         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary-fixed opacity-10 blur-3xl -z-10"></div>
                         <div className="rounded-[2.5rem] overflow-hidden shadow-2xl shadow-on-surface/10 aspect-[4/5] relative">
-                            <img className="w-full h-full object-cover" alt="Ein professioneller Physiotherapeut im Gespräch mit einem pflegenden Angehörigen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEapzTqAM8D6MRy4vWGgyfJQ1TjIyba5DulRrH4GH7IZ0Fx_CBt4BoxX2FEbs5CafHoBHvlDlZLjHrx3BDAAU03qsJMgWdJRpzIdYgfa0uN6r97rdDGGaIOkPq-tN9qNX4SXmLVPQPFdNc_hezQmu4hC-ROb5awgdr5d_ti-j-ZLkFOeobrEIUjaSIb5hQHJ8xoYw9kOKjVKim8Ca6zP-9iCT_NE2pFSDGkZLsvhirU5MxzlJUsUU6PSYG60iPfgo1L7sW34jkYCXx"/>
+                            <img className="w-full h-full object-cover" alt="Ein professioneller Physiotherapeut im Gespräch mit einem pflegenden Angehörigen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEapzTqAM8D6MRy4vWGgyfJQ1TjIyba5DulRrH4GH7IZ0Fx_CBt4BoxX2FEbs5CafHoBHvlDlZLjHrx3BDAAU03qsJMgWdJRpzIdYgfa0uN6r97rdDGGaIOkPq-tN9qNX4SXmLVPQPFdNc_hezQmu4hC-ROb5awgdr5d_ti-j-ZLkFOeobrEIUjaSIb5hQHJ8xoYw9kOKjVKim8Ca6zP-9iCT_NE2pFSDGkZLsvhirU5MxzlJUsUU6PSYG60iPfgo1L7sW34jkYCXx" />
                         </div>
                         {/* Floating Stat Card */}
                         <div className="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-xl shadow-2xl max-w-xs">
@@ -40,7 +40,7 @@ const RelativesPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/* Service Bento Grid Section */}
             <section className="bg-surface-container-low py-32 px-8">
                 <div className="max-w-7xl mx-auto">
@@ -70,7 +70,7 @@ const RelativesPage = () => {
                         </div>
                         {/* Self Protection Card */}
                         <div className="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-10 rounded-[2rem] flex flex-col items-center text-center justify-center">
-                            <span className="material-symbols-outlined text-6xl mb-6" style={{fontVariationSettings: "'FILL' 1"}}>shield_with_heart</span>
+                            <span className="material-symbols-outlined text-6xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>shield_with_heart</span>
                             <h3 className="text-2xl font-bold mb-4">Selbstschutz</h3>
                             <p className="text-on-tertiary-container/80">Vermeidung von Burnout und körperlicher Belastung durch spezialisierte Bewegungsstrategien für Pflegende.</p>
                         </div>
@@ -83,7 +83,7 @@ const RelativesPage = () => {
                         {/* Quote/Mission Card */}
                         <div className="md:col-span-8 bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/15 flex items-center">
                             <div className="flex flex-col md:flex-row gap-10 items-center">
-                                <img className="w-32 h-32 rounded-full object-cover shadow-lg" alt="Nahaufnahme einer Pflegekraft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1GxlVmEzFYkAICKDdynwOWezyadW_NXzFWTbxtTTrxwMNo_n2ILb1BqXpCcmn14zA5FQxIx3Ft6s4CiCa6jPAI4jljm1L7gzGf8ePAXNwSe8KCcey2TRIe6fQDOF0N87UtzTdD-f3SvMCzqODKT32y6ttBIGSttl6V8NMslDoT-VnE8QgHm7k_h8c9-lV3yqljruEOuEuNc67sYjAWapSO-Ln2gpEt9y3lE7oDT42s22RjoD9UkNkCgr96L4ImNFrZGtNOZFUIAWq"/>
+                                <img className="w-32 h-32 rounded-full object-cover shadow-lg" alt="Nahaufnahme einer Pflegekraft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1GxlVmEzFYkAICKDdynwOWezyadW_NXzFWTbxtTTrxwMNo_n2ILb1BqXpCcmn14zA5FQxIx3Ft6s4CiCa6jPAI4jljm1L7gzGf8ePAXNwSe8KCcey2TRIe6fQDOF0N87UtzTdD-f3SvMCzqODKT32y6ttBIGSttl6V8NMslDoT-VnE8QgHm7k_h8c9-lV3yqljruEOuEuNc67sYjAWapSO-Ln2gpEt9y3lE7oDT42s22RjoD9UkNkCgr96L4ImNFrZGtNOZFUIAWq" />
                                 <blockquote className="text-2xl font-medium italic text-on-surface leading-snug">
                                     &quot;Unsere Mission ist es sicherzustellen, dass die pflegende Person niemals der vergessene Patient im Raum ist.&quot;
                                 </blockquote>
@@ -92,13 +92,13 @@ const RelativesPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/* Therapy Integration Section */}
             <section className="py-32 px-8 overflow-hidden">
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
                     <div className="lg:w-1/2 relative">
                         <div className="absolute -bottom-10 -left-10 w-64 h-64 rounded-full bg-secondary opacity-5 blur-[80px]"></div>
-                        <img className="rounded-[2.5rem] shadow-2xl relative z-10" alt="Physiotherapeut demonstriert Übung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBle8g0TtOjoazCfItWqcWhzKPBXHzBlPIp8qUZ-TKNbjjkiKEF15Smi_vAf8p_l9QJ4T34dYAj0tzSUMHrNETa5wYzk4KrdBIBq8E1yYjpENhK1hoLQNBXVkqz7QMriey38CYTFwIOl1kjU396_6YFrP3TuxgdBkQ0989RyfZwWOV0qlwG52OP3SoLluZlmXYuh87vLDGkSrWO2Pfl_3hcaKsEt3zixEz-Kakaxbwr6YHGZCNITyVuoagl1UsfIyH4iWKHKG8qXDfS"/>
+                        <img className="rounded-[2.5rem] shadow-2xl relative z-10" alt="Physiotherapeut demonstriert Übung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBle8g0TtOjoazCfItWqcWhzKPBXHzBlPIp8qUZ-TKNbjjkiKEF15Smi_vAf8p_l9QJ4T34dYAj0tzSUMHrNETa5wYzk4KrdBIBq8E1yYjpENhK1hoLQNBXVkqz7QMriey38CYTFwIOl1kjU396_6YFrP3TuxgdBkQ0989RyfZwWOV0qlwG52OP3SoLluZlmXYuh87vLDGkSrWO2Pfl_3hcaKsEt3zixEz-Kakaxbwr6YHGZCNITyVuoagl1UsfIyH4iWKHKG8qXDfS" />
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Integriertes Unterstützungssystem</h2>
@@ -134,7 +134,7 @@ const RelativesPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/* CTA Section */}
             <section className="px-8 pb-32">
                 <div className="max-w-5xl mx-auto bg-primary text-white p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden">

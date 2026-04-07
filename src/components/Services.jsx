@@ -1,84 +1,69 @@
 import React from 'react';
 
 const Services = () => {
-  return (
-    <section className="bg-[#166E41] py-32 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-80 h-80 border-4 border-primary-fixed/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-primary-fixed/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="mb-24 text-center">
-          <span className="text-white font-label text-sm tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-4">
-            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span></span>
-            Meine Fachbereiche
-            <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span><span className="w-1.5 h-1.5 rounded-full bg-white/40"></span></span>
-          </span>
-          <h2 className="text-5xl lg:text-7xl font-headline font-black text-white tracking-tighter">Spezialisierte <br className="hidden md:block"/>Behandlungsfelder</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">neurology</span>
+    return (
+        <section className="bg-[#166E41] py-32 relative overflow-hidden font-manrope">
+            {/* Soft decorative background elements */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#166E41]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#22BB11]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+
+            <div className="max-w-7xl mx-auto px-8 relative z-10">
+
+                {/* Section Header */}
+                <div className="mb-24 text-center">
+                    <span className="text-[#166E41] font-black text-xs tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-4">
+                        <span className="w-12 h-[1px] bg-[#166E41]/20"></span>
+                        Fachbereiche
+                        <span className="w-12 h-[1px] bg-[#166E41]/20"></span>
+                    </span>
+                    <h2 className="text-4xl lg:text-7xl font-black text-white tracking-tighter leading-none mb-6">
+                        Spezialisierte <br className="hidden md:block" />
+                        <span className="text-[#22BB11]">Behandlungsfelder</span>
+                    </h2>
+                </div>
+
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    {/* Service Card Component Wrapper */}
+                    {[
+                        { title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Verbesserung von Gangbild, Gleichgewicht und Selbstständigkeit bei Schlaganfall, Parkinson oder MS.' },
+                        { title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Alltagsnahe Therapie bei Lagerungsschwindel, Gangunsicherheit und vestibulären Störungen.' },
+                        { title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Unterstützung bei Fatigue und Lymphödemen durch manuelle Lymphdrainage und Belastungsaufbau.' },
+                        { title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Mobilitätserhalt und Sturzprophylaxe bei Altersgebrechlichkeit oder hohem Pflegebedarf.' },
+                        { title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Verbesserte Atemmechanik und Belastbarkeit bei COPD, Asthma oder Post-COVID-Symptomen.' },
+                        { title: 'Chronische Wunden', icon: 'healing', text: 'Begleitende Physiotherapie zur Förderung der Durchblutung und Mobilität bei Wundheilungsstörungen.' }
+                    ].map((service, index) => (
+                        <div key={index} className="group relative bg-[#f8faf9] p-10 rounded-[2.5rem] border border-slate-100 hover:border-[#22BB11]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#166E41]/10 transition-all duration-500 overflow-hidden">
+
+                            {/* Accent Circle */}
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#22BB11]/5 rounded-full group-hover:scale-150 transition-all duration-700"></div>
+
+                            <div className="relative z-10">
+                                <div className="w-16 h-16 bg-white shadow-xl shadow-[#166E41]/5 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-[#166E41] group-hover:rotate-6 transition-all duration-500">
+                                    <span className="material-symbols-outlined text-[#166E41] group-hover:text-white text-4xl transition-colors">
+                                        {service.icon}
+                                    </span>
+                                </div>
+
+                                <h3 className="text-2xl font-black text-black mb-4 leading-tight group-hover:text-[#166E41] transition-colors">
+                                    {service.title}
+                                </h3>
+
+                                <p className="text-black/60 text-base leading-relaxed font-medium">
+                                    {service.text}
+                                </p>
+                            </div>
+
+                            {/* Bottom Highlight */}
+                            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-[#22BB11] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                        </div>
+                    ))}
+
+                </div>
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Neurologische Erkrankungen</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Behandlung unter anderem bei Schlaganfall, Parkinson, Multipler Sklerose, neurologischen Ausfällen nach Unfällen oder Operationen sowie Geburtsgebrechen. Ziel ist die Verbesserung von Gangbild, Gleichgewicht, Koordination, Kraft und Selbstständigkeit im Alltag.
-            </p>
-          </div>
-          {/* Card 2 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">balance</span>
-            </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Schwindel &amp; Gleichgewicht</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Behandlung bei Lagerungsschwindel, vestibulären Funktionsstörungen, Gangunsicherheit, Schwindel nach Stürzen oder Infekten sowie Unsicherheit beim Drehen oder Gehen. Die Schwindeltherapie erfolgt alltagsnah – dort, wo Schwindel tatsächlich auftritt.
-            </p>
-          </div>
-          {/* Card 3 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">clinical_notes</span>
-            </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Onkologie &amp; Lymphologie</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Behandlung bei Fatigue, Kraft- und Konditionsverlust, Lymphödemen, Bewegungseinschränkungen und Schmerzen nach Tumortherapien. Einsatz von manueller Lymphdrainage, Mobilisation und dosiertem Belastungsaufbau.
-            </p>
-          </div>
-          {/* Card 4 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">elderly</span>
-            </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Geriatrie &amp; Pflege</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Behandlung bei Mobilitätsverlust im Alter, Sturzgefährdung, Bettlägerigkeit, Zuständen nach Krankenhausaufenthalten sowie Multimorbidität. Ergänzend Sturzprophylaxe, Kontrakturprophylaxe sowie unterstützende Maßnahmen zur Dekubitus- und Pneumonieprophylaxe.
-            </p>
-          </div>
-          {/* Card 5 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">respiratory_rate</span>
-            </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Atemtherapie</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Behandlung bei COPD, Asthma bronchiale, Lungenfibrose, Post-/Long-COVID sowie eingeschränkter Atemmechanik bei Immobilität. Ziel ist eine verbesserte Atemökonomie, mehr Belastbarkeit und Sicherheit im Alltag.
-            </p>
-          </div>
-          {/* Card 6 */}
-          <div className="bg-[#22BB11] p-10 rounded-xl hover:scale-[1.02] transition-all duration-300 group">
-            <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-8">
-              <span className="material-symbols-outlined text-white text-3xl">healing</span>
-            </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Chronische Wunden</h3>
-            <p className="text-on-tertiary-container mb-8 leading-relaxed">
-              Unterstützung bei venösen und arteriellen Wunden, diabetischen Wunden, Wundheilungsstörungen, Bewegungseinschränkungen sowie Schonhaltungen und Folgeschmerzen. Fokus auf Mobilität, Durchblutung und Alltagssicherheit.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Services;

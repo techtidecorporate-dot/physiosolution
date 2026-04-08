@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import RelativesPage from './pages/RelativesPage';
 import ContactPage from './pages/ContactPage';
 import BookVisitPage from './pages/BookVisitPage';
+import AdminDashboard from './pages/AdminDashboard'; // Added import
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -20,27 +21,45 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Layout wrapper for site content with Header and Footer
+const SiteLayout = ({ children }) => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/concept" element={<ConceptPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/for-relatives" element={<RelativesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/book-visit" element={<BookVisitPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Admin Route - No Header/Footer */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
+        {/* Public Routes - With Header/Footer */}
+        <Route path="*" element={
+          <SiteLayout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/concept" element={<ConceptPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/for-relatives" element={<RelativesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/book-visit" element={<BookVisitPage />} />
+            </Routes>
+          </SiteLayout>
+        } />
+      </Routes>
     </Router>
   );
 }
 
 export default App;
+

@@ -61,7 +61,7 @@ export default {
         "body": ["Manrope", "sans-serif"],
         "label": ["Manrope", "sans-serif"]
       },
-      borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px" },
     },
   },
   plugins: [],

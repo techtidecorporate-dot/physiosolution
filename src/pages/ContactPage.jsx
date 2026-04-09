@@ -1,6 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { db } from '../firebase';
+import { ref, push, set } from 'firebase/database';
 
 const ContactPage = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const contactsRef = ref(db, 'contacts');
+            const newContactRef = push(contactsRef);
+            await set(newContactRef, {
+                ...formData,
+                timestamp: Date.now(),
+                status: 'unread'
+            });
+            setSuccess(true);
+            setFormData({ name: '', email: '', phone: '', message: '' });
+            setTimeout(() => setSuccess(false), 5000);
+        } catch (error) {
+            console.error("Error saving contact:", error);
+            alert("Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.");
+        }
+        setLoading(false);
+    };
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
     return (
         <div className="pt-24 pb-24 bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
             {/* Hero Section */}
@@ -27,30 +63,73 @@ const ContactPage = () => {
                     <div className="bg-surface-container p-8 md:p-12 rounded-xl">
                         <h2 className="text-3xl font-headline font-bold text-primary mb-2">Kontaktieren Sie uns</h2>
                         <p className="text-on-surface-variant mb-8 font-medium">Wir freuen uns auf Ihre Nachricht und melden uns zeitnah bei Ihnen.</p>
-                        <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="flex flex-col gap-2">
-                                    <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Name</label>
-                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="Vorname Nachname" type="text"/>
+                        
+                        {success ? (
+                            <div className="bg-primary/10 border border-primary text-primary p-6 rounded-xl text-center font-bold">
+                                Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+                            </div>
+                        ) : (
+                            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="flex flex-col gap-2">
+                                        <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Name</label>
+                                        <input 
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
+                                            placeholder="Vorname Nachname" 
+                                            type="text"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">E-Mail</label>
+                                        <input 
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
+                                            placeholder="beispiel@mail.ch" 
+                                            type="email"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">E-Mail</label>
-                                    <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="beispiel@mail.ch" type="email"/>
+                                    <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Mobilnummer</label>
+                                    <input 
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
+                                        placeholder="07x xxx xx xx" 
+                                        type="tel"
+                                    />
                                 </div>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Mobilnummer</label>
-                                <input className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="07x xxx xx xx" type="tel"/>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Nachricht</label>
-                                <textarea className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" placeholder="Wie können wir Ihnen helfen?" rows="4"></textarea>
-                            </div>
-                            <button className="mt-4 bg-[#166E41] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl active:scale-[0.98] transition-all flex justify-center items-center gap-2" type="submit">
-                                Nachricht senden
-                                <span className="material-symbols-outlined">send</span>
-                            </button>
-                        </form>
+                                <div className="flex flex-col gap-2">
+                                    <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Nachricht</label>
+                                    <textarea 
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
+                                        placeholder="Wie können wir Ihnen helfen?" 
+                                        rows="4"
+                                    ></textarea>
+                                </div>
+                                <button 
+                                    disabled={loading}
+                                    className="mt-4 bg-[#166E41] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl active:scale-[0.98] transition-all flex justify-center items-center gap-2 disabled:opacity-50" 
+                                    type="submit"
+                                >
+                                    {loading ? 'Wird gesendet...' : 'Nachricht senden'}
+                                    <span className="material-symbols-outlined">send</span>
+                                </button>
+                            </form>
+                        )}
                     </div>
                     {/* Right Column: Contact Information */}
                     <div className="flex flex-col gap-12 lg:pl-12">
@@ -103,10 +182,9 @@ const ContactPage = () => {
                     </div>
                 </div>
             </section>
-            
-
         </div>
     );
 };
 
 export default ContactPage;
+

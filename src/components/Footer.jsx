@@ -106,9 +106,10 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
-            <Link to="/about" className="hover:text-white transition-colors">Impressum</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Datenschutz</Link>
+          <div className="flex flex-wrap justify-center gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
+            <Link to="/imprint" className="hover:text-white transition-colors">Impressum</Link>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Datenschutz</Link>
+            <Link to="/terms-conditions" className="hover:text-white transition-colors">AGB</Link>
           </div>
         </div>
 

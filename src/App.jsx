@@ -9,7 +9,10 @@ import AboutPage from './pages/AboutPage';
 import RelativesPage from './pages/RelativesPage';
 import ContactPage from './pages/ContactPage';
 import BookVisitPage from './pages/BookVisitPage';
-import AdminDashboard from './pages/AdminDashboard'; // Added import
+import AdminDashboard from './pages/AdminDashboard';
+import ImprintPage from './pages/ImprintPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -53,6 +56,9 @@ function App() {
               <Route path="/for-relatives" element={<RelativesPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/book-visit" element={<BookVisitPage />} />
+              <Route path="/imprint" element={<ImprintPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-conditions" element={<TermsPage />} />
             </Routes>
           </SiteLayout>
         } />

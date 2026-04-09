@@ -1,14 +1,48 @@
-import React from 'react';
-import { Calendar as CalendarIcon, Clock, ChevronLeft, ChevronRight, Filter, Search, MoreVertical } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Calendar as CalendarIcon, Clock, ChevronLeft, ChevronRight, Search, MoreVertical } from 'lucide-react';
+import { db } from '../../firebase';
+import { ref, onValue } from 'firebase/database';
 
 const Appointments = () => {
-  const appointments = [
-    { id: 1, patient: 'Sarah Johnson', time: '09:00 AM', duration: '45 min', service: 'Physiotherapy', therapist: 'Dr. Miller', status: 'Upcoming' },
-    { id: 2, patient: 'Michael Chen', time: '10:15 AM', duration: '60 min', service: 'Manual Therapy', therapist: 'Dr. Schmidt', status: 'Ongoing' },
-    { id: 3, patient: 'Emma Wilson', time: '11:30 AM', duration: '30 min', service: 'Consultation', therapist: 'Dr. Miller', status: 'Upcoming' },
-    { id: 4, patient: 'James Miller', time: '02:00 PM', duration: '45 min', service: 'Sports Massage', therapist: 'Dr. Koch', status: 'Pending' },
-    { id: 5, patient: 'Anna Schmidt', time: '03:15 PM', duration: '60 min', service: 'Rehabilitation', therapist: 'Dr. Schmidt', status: 'Upcoming' },
-  ];
+  const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
+  const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
+
+  const handlePrevMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  const handleNextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const daysInMonth = getDaysInMonth(year, month);
+  const firstDay = getFirstDayOfMonth(year, month);
+  const blanks = Array.from({ length: firstDay });
+  const days = Array.from({ length: daysInMonth });
+
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  useEffect(() => {
+    const appointmentsRef = ref(db, 'appointments');
+    const unsubscribe = onValue(appointmentsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const apptList = Object.entries(data).map(([id, value]) => ({
+          id,
+          ...value
+        })).sort((a, b) => b.timestamp - a.timestamp);
+        setAppointments(apptList);
+      } else {
+        setAppointments([]);
+      }
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -18,12 +52,6 @@ const Appointments = () => {
           <p className="text-on-surface-variant text-sm">Schedule and manage your therapy sessions</p>
         </div>
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 border border-outline-variant px-4 py-2 rounded-xl font-medium hover:bg-surface-container-low transition-all">
-            <CalendarIcon size={18} /> View Calendar
-          </button>
-          <button className="bg-primary text-on-primary px-4 py-2 rounded-xl font-medium hover:opacity-90 transition-all shadow-sm">
-            + New Appointment
-          </button>
         </div>
       </div>
 
@@ -32,28 +60,38 @@ const Appointments = () => {
         <div className="lg:col-span-1 space-y-6">
           <div className="bg-surface rounded-2xl border border-outline-variant p-4">
             <div className="flex items-center justify-between mb-4">
-              <span className="font-bold text-on-surface">October 2023</span>
+              <span className="font-bold text-on-surface">{monthNames[month]} {year}</span>
               <div className="flex gap-1">
-                <button className="p-1 hover:bg-surface-container rounded"><ChevronLeft size={16} /></button>
-                <button className="p-1 hover:bg-surface-container rounded"><ChevronRight size={16} /></button>
+                <button onClick={handlePrevMonth} className="p-1 hover:bg-surface-container rounded"><ChevronLeft size={16} /></button>
+                <button onClick={handleNextMonth} className="p-1 hover:bg-surface-container rounded"><ChevronRight size={16} /></button>
               </div>
             </div>
             <div className="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-on-surface-variant mb-2">
               <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
             </div>
             <div className="grid grid-cols-7 gap-1 text-center">
-              {Array.from({ length: 31 }).map((_, i) => (
-                <button 
-                  key={i} 
-                  className={`py-1 text-xs rounded-lg transition-colors ${
-                    i + 1 === 12 ? 'bg-primary text-on-primary font-bold shadow-sm shadow-primary/30' : 
-                    [10, 15, 20].includes(i+1) ? 'bg-primary-container/20 text-primary font-medium' :
-                    'hover:bg-surface-container'
-                  }`}
-                >
-                  {i + 1}
-                </button>
+              {blanks.map((_, i) => (
+                <div key={`blank-${i}`} className="py-1"></div>
               ))}
+              {days.map((_, i) => {
+                const dayDate = new Date(year, month, i + 1);
+                const isSelected = selectedDate && dayDate.toDateString() === selectedDate.toDateString();
+                const isToday = dayDate.toDateString() === new Date().toDateString();
+                
+                return (
+                  <button 
+                    key={i} 
+                    onClick={() => setSelectedDate(isSelected ? null : dayDate)}
+                    className={`py-1 text-xs rounded-lg transition-colors ${
+                      isSelected ? 'bg-primary text-on-primary font-bold shadow-sm shadow-primary/30' : 
+                      isToday ? 'bg-primary-container/20 text-primary font-bold' :
+                      'hover:bg-surface-container text-on-surface'
+                    }`}
+                  >
+                    {i + 1}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -62,15 +100,11 @@ const Appointments = () => {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm">
                 <span className="text-on-surface-variant">Today's Total</span>
-                <span className="font-bold">12</span>
+                <span className="font-bold">{appointments.length}</span>
               </div>
               <div className="flex justify-between items-center text-sm">
-                <span className="text-on-surface-variant">Completed</span>
-                <span className="font-bold">4</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-on-surface-variant">Remaining</span>
-                <span className="font-bold">8</span>
+                <span className="text-on-surface-variant">Total Requests</span>
+                <span className="font-bold">{appointments.length}</span>
               </div>
             </div>
           </div>
@@ -80,49 +114,59 @@ const Appointments = () => {
         <div className="lg:col-span-3 space-y-4">
           <div className="flex items-center justify-between bg-surface p-4 rounded-2xl border border-outline-variant">
             <div className="flex items-center gap-4">
-              <span className="text-lg font-bold text-on-surface">Today, Oct 12</span>
+              <span className="text-lg font-bold text-on-surface">Appointment List</span>
               <div className="flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-full text-xs font-medium text-on-surface-variant border border-outline-variant">
-                <Clock size={14} /> 12:48 PM
+                <Clock size={14} /> Live tracking
               </div>
             </div>
-            <div className="flex gap-2">
-              <button className="p-2 border border-outline-variant rounded-xl hover:bg-surface-container transition-all">
-                <Search size={18} className="text-on-surface-variant" />
-              </button>
-              <button className="p-2 border border-outline-variant rounded-xl hover:bg-surface-container transition-all">
-                <Filter size={18} className="text-on-surface-variant" />
-              </button>
+            <div className="flex bg-surface-container-low rounded-xl px-3 py-2 border border-outline-variant w-64 items-center">
+              <Search size={18} className="text-on-surface-variant mr-2" />
+              <input
+                type="text"
+                placeholder="Search patients or dates..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="bg-transparent border-none outline-none text-sm w-full text-on-surface"
+              />
             </div>
           </div>
 
           <div className="space-y-3">
-            {appointments.map((appt) => (
+            {loading ? (
+              <div className="p-8 text-center text-on-surface-variant">Loading appointments...</div>
+            ) : appointments.length === 0 ? (
+              <div className="p-8 text-center text-on-surface-variant bg-surface rounded-2xl border border-dashed border-outline-variant">No appointments found in database.</div>
+            ) : appointments.filter(appt => {
+              const matchesSearch = appt.name?.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                                    appt.service?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    appt.date?.toLowerCase().includes(searchTerm.toLowerCase());
+              
+              if (selectedDate) {
+                const apptDate = new Date(appt.timestamp).toDateString();
+                return matchesSearch && apptDate === selectedDate.toDateString();
+              }
+              return matchesSearch;
+            }).map((appt) => (
               <div key={appt.id} className="bg-surface group hover:border-primary/30 border border-outline-variant rounded-2xl p-4 transition-all hover:shadow-md flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-surface-container-low flex flex-col items-center justify-center border border-outline-variant group-hover:bg-primary/5 transition-colors">
-                    <span className="text-[10px] font-bold text-on-surface-variant uppercase">{appt.time.split(' ')[1]}</span>
-                    <span className="text-lg font-bold text-primary leading-tight">{appt.time.split(':')[0]}</span>
+                  <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center border border-outline-variant group-hover:bg-primary/5 transition-colors">
+                    <span className="text-lg font-bold text-primary leading-tight">{appt.name.charAt(0)}</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-on-surface">{appt.patient}</h4>
+                    <h4 className="font-bold text-on-surface">{appt.name}</h4>
                     <p className="text-xs text-on-surface-variant flex items-center gap-1">
-                      <span className="font-medium text-primary">{appt.service}</span> • {appt.duration} • {appt.therapist}
+                      <span className="font-medium text-primary">{appt.service}</span> • {appt.date} • {appt.phone}
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-6">
-                  <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-                    appt.status === 'Ongoing' ? 'bg-secondary-fixed text-on-secondary-fixed ring-4 ring-secondary-fixed/10' :
-                    appt.status === 'Upcoming' ? 'bg-primary-container/20 text-primary' :
-                    'bg-surface-container-high text-on-surface-variant'
-                  }`}>
-                    {appt.status}
+                  <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${appt.status === 'Confirmed' ? 'bg-primary-container/20 text-primary' :
+                      'bg-surface-container-high text-on-surface-variant'
+                    }`}>
+                    {appt.status || 'Pending'}
                   </span>
                   <div className="flex items-center gap-2">
-                    <button className="px-3 py-1.5 bg-surface-container-low text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-all">
-                      Reschedule
-                    </button>
                     <button className="p-2 hover:bg-surface-container text-on-surface-variant rounded-lg">
                       <MoreVertical size={18} />
                     </button>
@@ -131,10 +175,8 @@ const Appointments = () => {
               </div>
             ))}
           </div>
-          
-          <button className="w-full py-4 border-2 border-dashed border-outline-variant rounded-2xl text-on-surface-variant font-medium hover:bg-surface-container-low hover:border-primary/20 transition-all flex items-center justify-center gap-2">
-            + Schedule an appointment for tomorrow
-          </button>
+
+
         </div>
       </div>
     </div>
@@ -142,3 +184,4 @@ const Appointments = () => {
 };
 
 export default Appointments;
+

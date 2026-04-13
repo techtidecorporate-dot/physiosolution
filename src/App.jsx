@@ -10,6 +10,8 @@ import RelativesPage from './pages/RelativesPage';
 import ContactPage from './pages/ContactPage';
 import BookVisitPage from './pages/BookVisitPage';
 import AdminDashboard from './pages/AdminDashboard';
+import AdminLoginPage from './pages/AdminLoginPage';
+import ProtectedRoute from './components/ProtectedRoute';
 import ImprintPage from './pages/ImprintPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
@@ -42,8 +44,16 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        {/* Admin Route - No Header/Footer */}
-        <Route path="/admin" element={<AdminDashboard />} />
+        {/* Admin Routes - No Header/Footer */}
+        <Route path="/admin/login" element={<AdminLoginPage />} />
+        <Route 
+          path="/admin" 
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } 
+        />
 
         {/* Public Routes - With Header/Footer */}
         <Route path="*" element={

@@ -89,13 +89,13 @@ const AdminDashboard = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <DashboardHome stats={stats} recentAppointments={statsData.recentAppointments} />;
+        return <DashboardHome stats={stats} recentAppointments={statsData.recentAppointments} setActiveTab={setActiveTab} />;
       case 'appointments':
         return <Appointments />;
       case 'contacts':
         return <ContactSubmissions />;
       default:
-        return <DashboardHome stats={stats} recentAppointments={statsData.recentAppointments} />;
+        return <DashboardHome stats={stats} recentAppointments={statsData.recentAppointments} setActiveTab={setActiveTab} />;
     }
   };
 

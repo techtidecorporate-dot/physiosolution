@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const DashboardHome = ({ stats, recentAppointments }) => {
+const DashboardHome = ({ stats, recentAppointments, setActiveTab }) => {
   return (
     <div className="p-8 max-w-7xl mx-auto">
       {/* Welcome Section */}
@@ -26,7 +26,8 @@ const DashboardHome = ({ stats, recentAppointments }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
             whileHover={{ y: -5 }}
-            className="bg-surface p-6 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-all group"
+            onClick={() => setActiveTab('appointments')}
+            className="bg-surface p-6 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-all group cursor-pointer"
           >
             <div className="flex justify-between items-start mb-4">
               <div className={`p-3 rounded-xl bg-surface-container-low ${stat.color} transition-colors group-hover:bg-primary group-hover:text-on-primary`}>
@@ -46,7 +47,12 @@ const DashboardHome = ({ stats, recentAppointments }) => {
       <div className="bg-surface rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <div className="p-6 border-b border-outline-variant flex items-center justify-between">
           <h3 className="text-xl font-bold text-on-surface">Recent Appointments</h3>
-          <button className="text-primary font-bold text-sm hover:underline">View All</button>
+          <button 
+            onClick={() => setActiveTab('appointments')}
+            className="text-primary font-bold text-sm hover:underline"
+          >
+            View All
+          </button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left">

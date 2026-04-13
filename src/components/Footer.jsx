@@ -4,7 +4,7 @@ import Logo from '../../public/images/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#166E41] pt-24 pb-12 text-white font-manrope overflow-hidden">
+    <footer className="relative bg-[#166E41] pt-16 pb-10 text-white font-manrope overflow-hidden">
 
       {/* Premium Gradient Overlays */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-8 relative z-10">
 
         {/* Superior Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-12">
 
           {/* Brand Presentation */}
           <div className="lg:col-span-4 flex flex-col gap-10">
@@ -34,7 +34,7 @@ const Footer = () => {
 
           {/* Site Navigation */}
           <div className="lg:col-span-2">
-            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-10">Schnellzugriff</h5>
+            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-6">Schnellzugriff</h5>
             <ul className="flex flex-col gap-5 text-base font-bold">
               <li><Link to="/" className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block">Startseite</Link></li>
               <li><Link to="/concept" className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block">Konzept</Link></li>
@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Specialties List */}
           <div className="lg:col-span-3">
-            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-10">Leistungen</h5>
+            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-6">Leistungen</h5>
             <ul className="flex flex-col gap-5 text-sm font-semibold">
               <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Neurologische Erkrankungen</Link></li>
               <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Schwindel &amp; Gleichgewicht</Link></li>
@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Elite Contact Block */}
           <div className="lg:col-span-3">
-            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-10">Kontakt</h5>
+            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-6">Kontakt</h5>
             <div className="space-y-3">
               <Link to="/about" className="text-base font-black hover:text-white/80 transition-colors block mb-6">Über mich</Link>
 
@@ -99,11 +99,10 @@ const Footer = () => {
         </div>
 
         {/* Sophisticated Bottom Bar */}
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="flex items-center gap-6">
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">
-              © 2026 Physio Solution. Alle Rechte vorbehalten
-            </p>
+              © 2026 Physio-Health GmbH. Alle Rechte vorbehalten.            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">

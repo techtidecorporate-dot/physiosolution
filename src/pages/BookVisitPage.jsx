@@ -12,8 +12,22 @@ const BookVisitPage = () => {
         service: 'Neurologische Erkrankungen',
         notes: ''
     });
+    const [fileData, setFileData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [currentCalendarDate, setCurrentCalendarDate] = useState(new Date());
+    const [selectedDay, setSelectedDay] = useState(null);
+    const [selectedTime, setSelectedTime] = useState('');
+
+    // Helper to convert file to Base64 string
+    const fileToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = (error) => reject(error);
+        });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,22 +35,38 @@ const BookVisitPage = () => {
         try {
             const appointmentsRef = ref(db, 'appointments');
             const newAppointmentRef = push(appointmentsRef);
+            
             await set(newAppointmentRef, {
                 ...formData,
+                prescriptionFile: fileData, // Saved as Base64 string in JSON
                 timestamp: Date.now(),
-                status: 'Confirmed' // Defaulting to confirmed as in the original mock
+                status: 'Confirmed'
             });
+
             setSuccess(true);
             setFormData({
                 name: '', email: '', phone: '', date: '', 
                 verordnung: 'nein', service: 'Neurologische Erkrankungen', notes: ''
             });
+            setFileData(null);
             setTimeout(() => setSuccess(false), 5000);
         } catch (error) {
             console.error("Error saving appointment:", error);
             alert("Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut.");
         }
         setLoading(false);
+    };
+
+    const handleFileChange = async (e) => {
+        const selectedFile = e.target.files[0];
+        if (selectedFile) {
+            try {
+                const base64 = await fileToBase64(selectedFile);
+                setFileData(base64);
+            } catch (err) {
+                console.error("Error converting file:", err);
+            }
+        }
     };
 
     const handleChange = (e) => {
@@ -99,17 +129,95 @@ const BookVisitPage = () => {
                                         type="tel"
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Wunschdatum / Zeit</label>
-                                    <input 
-                                        name="date"
-                                        value={formData.date}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium" 
-                                        placeholder="z.B. Dienstag Vormittag" 
-                                        type="text"
-                                    />
+                                <div className="space-y-4">
+                                    <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1 block mb-2">Wunschdatum auswählen</label>
+                                    
+                                    <div className="p-4 bg-surface-container-low rounded-2xl border border-outline-variant/30">
+                                        <div className="flex items-center justify-between mb-4 px-2">
+                                            <span className="font-bold text-lg text-on-surface">
+                                                {new Intl.DateTimeFormat('de-CH', { month: 'long', year: 'numeric' }).format(currentCalendarDate)}
+                                            </span>
+                                            <div className="flex gap-2">
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => setCurrentCalendarDate(new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth() - 1, 1))}
+                                                    className="p-2 hover:bg-surface-container rounded-xl transition-colors border border-outline-variant/20"
+                                                >
+                                                    <span className="material-symbols-outlined text-sm">chevron_left</span>
+                                                </button>
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => setCurrentCalendarDate(new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth() + 1, 1))}
+                                                    className="p-2 hover:bg-surface-container rounded-xl transition-colors border border-outline-variant/20"
+                                                >
+                                                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div className="grid grid-cols-7 gap-1 text-center mb-2">
+                                            {['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'].map(d => (
+                                                <span key={d} className="text-[10px] font-black uppercase text-on-surface-variant/40 py-2">{d}</span>
+                                            ))}
+                                            {Array.from({ length: (new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth(), 1).getDay() + 6) % 7 }).map((_, i) => (
+                                                <div key={`empty-${i}`} className="p-2"></div>
+                                            ))}
+                                            {Array.from({ length: new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth() + 1, 0).getDate() }).map((_, i) => {
+                                                const day = i + 1;
+                                                const d = new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth(), day);
+                                                const isSelected = selectedDay && d.toDateString() === selectedDay.toDateString();
+                                                const isToday = d.toDateString() === new Date().toDateString();
+                                                const isPast = d < new Date(new Date().setHours(0,0,0,0));
+
+                                                return (
+                                                    <button
+                                                        key={day}
+                                                        type="button"
+                                                        disabled={isPast}
+                                                        onClick={() => {
+                                                            setSelectedDay(d);
+                                                            setSelectedTime('');
+                                                            setFormData({ ...formData, date: d.toLocaleDateString('de-CH') });
+                                                        }}
+                                                        className={`p-2.5 text-sm rounded-xl transition-all relative group ${
+                                                            isSelected ? 'bg-[#166E41] text-white font-bold shadow-lg shadow-[#166E41]/30 rotate-3' : 
+                                                            isPast ? 'text-on-surface-variant/20 cursor-not-allowed' :
+                                                            'hover:bg-[#166E41]/10 text-on-surface font-medium border border-transparent hover:border-[#166E41]/20'
+                                                        }`}
+                                                    >
+                                                        {day}
+                                                        {isToday && !isSelected && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#166E41] rounded-full" />}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+
+                                    {/* Time Slot Selection */}
+                                    {selectedDay && (
+                                        <div className="mt-6 animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1 block mb-3">Verfügbare Zeitfenster</label>
+                                            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                                                {['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'].map(slot => (
+                                                    <button
+                                                        key={slot}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setSelectedTime(slot);
+                                                            setFormData({ ...formData, date: `${selectedDay.toLocaleDateString('de-CH')} um ${slot} Uhr` });
+                                                        }}
+                                                        className={`py-3 px-2 text-xs font-bold rounded-xl transition-all border ${
+                                                            selectedTime === slot 
+                                                            ? 'bg-[#166E41] text-white border-[#166E41] shadow-md -translate-y-1' 
+                                                            : 'bg-surface border-outline-variant/30 text-on-surface-variant hover:border-[#166E41] hover:text-[#166E41] hover:bg-[#166E41]/5'
+                                                        }`}
+                                                    >
+                                                        {slot}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className="space-y-4 py-4 border-y border-outline-variant/10">
@@ -141,10 +249,18 @@ const BookVisitPage = () => {
                                         <span>Nein</span>
                                     </label>
                                 </div>
-                                <div className="mt-4 px-1">
-                                    <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant block mb-2">Verordnung hochladen (optional)</label>
-                                    <input type="file" className="block w-full text-sm text-on-surface-variant file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-[#166E41]/10 file:text-[#166E41] hover:file:bg-[#166E41]/20 transition-all cursor-pointer" />
-                                </div>
+                                {formData.verordnung === 'ja' && (
+                                    <div className="mt-4 px-1 animate-in fade-in slide-in-from-top-2 duration-300">
+                                        <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant block mb-2">Verordnung hochladen</label>
+                                        <input 
+                                            type="file" 
+                                            onChange={handleFileChange}
+                                            required
+                                            className="block w-full text-sm text-on-surface-variant file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-[#166E41]/10 file:text-[#166E41] hover:file:bg-[#166E41]/20 transition-all cursor-pointer" 
+                                        />
+                                        <p className="mt-2 text-[10px] text-on-surface-variant/60 font-medium">Bitte laden Sie Ihre ärztliche Verordnung als PDF oder Bild hoch.</p>
+                                    </div>
+                                )}
                             </div>
                             <div className="space-y-2 pt-2">
                                 <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Gewünschte Leistung</label>

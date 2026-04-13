@@ -35,7 +35,7 @@ const Header = () => {
           <img src={Logo} alt="Physio Solution Logo" className="h-8 lg:h-12 w-auto object-contain" />
           <div className=" leading-none scale-90 lg:scale-100 origin-left">
             <span className="text-lg lg:text-xl font-black tracking-tighter text-white">PHYSIO</span>
-            <span className="text-lg lg:text-xl font-bold  text-[#50CB61]">SOLUTION</span>
+            <span className="text-lg lg:text-xl font-bold  text-[#50CB61]">SOLUTIONS.CH</span>
           </div>
         </Link>
 

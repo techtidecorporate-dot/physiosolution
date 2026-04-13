@@ -2,17 +2,9 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center overflow-hidden font-manrope">
-            {/* Background Image Wrapper */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    alt="Professionelle Physiotherapie Domizilbehandlung"
-                    className="w-full h-full object-cover object-center lg:object-right"
-                    src="/images/herobg.jpeg"
-                />
-                {/* Subtle light overlay on the left for text readability, keeping the right clear */}
-                <div className="absolute inset-0 bg-white/40 lg:bg-gradient-to-r lg:from-white/80 lg:via-white/40 lg:to-transparent"></div>
-            </div>
+        <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center overflow-hidden font-manrope bg-gradient-to-br from-white via-[#f7fdf9] to-[#ecf7ef]">
+            {/* Decorative Element */}
+            <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#ddeadf]/30 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-8 w-full relative z-10 pt-12 pb-12">
                 <div className="max-w-xl lg:max-w-2xl flex flex-col gap-6">
@@ -20,8 +12,8 @@ const Hero = () => {
                     {/* Main Title Block */}
                     <h1 className="text-3xl sm:text-3xl lg:text-[34px] font-bold leading-tight tracking-tight">
                         <span className="text-[#22BB11]">Physiotherapeutische</span>{' '}
-                        <span className="text-white lg:text-[#444]">Domizilbehandlungen in</span><br />
-                        <span className="text-white lg:text-[#444]">Bülach und im Zürcher Unterland</span>
+                        <span className="text-[#444]">Domizilbehandlungen in</span><br />
+                        <span className="text-[#444]">Bülach und im Zürcher Unterland</span>
                     </h1>
 
                     {/* Paragraphs with precise styling */}

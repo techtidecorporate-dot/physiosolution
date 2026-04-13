@@ -24,7 +24,7 @@ const AdminSidebar = ({ isSidebarOpen, activeTab, setActiveTab }) => {
             <img src={Logo} alt="Physio Solution Logo" className="h-10 w-auto object-contain mb-2" />
             <div className="leading-none text-center">
               <span className="text-lg font-black tracking-tighter text-on-surface">PHYSIO</span>
-              <span className="text-lg font-bold text-[#50CB61]">SOLUTION</span>
+              <span className="text-lg font-bold text-[#50CB61]">SOLUTIONS.CH</span>
             </div>
           </motion.div>
         ) : (
@@ -37,11 +37,10 @@ const AdminSidebar = ({ isSidebarOpen, activeTab, setActiveTab }) => {
           <button
             key={link.id}
             onClick={() => setActiveTab(link.id)}
-            className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl mb-1 transition-all group ${
-              activeTab === link.id
-                ? 'bg-primary text-on-primary'
-                : 'hover:bg-surface-container-low text-on-surface-variant'
-            }`}
+            className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl mb-1 transition-all group ${activeTab === link.id
+              ? 'bg-primary text-on-primary'
+              : 'hover:bg-surface-container-low text-on-surface-variant'
+              }`}
           >
             <link.icon size={22} className={activeTab === link.id ? 'text-secondary-fixed' : ''} />
             {isSidebarOpen && (
@@ -51,12 +50,7 @@ const AdminSidebar = ({ isSidebarOpen, activeTab, setActiveTab }) => {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-outline-variant">
-        <button className="w-full flex items-center gap-4 px-4 py-3 rounded-xl text-error hover:bg-error-container transition-all">
-          <LogOut size={22} />
-          {isSidebarOpen && <span className="font-medium">Logout</span>}
-        </button>
-      </div>
+
     </aside>
   );
 };

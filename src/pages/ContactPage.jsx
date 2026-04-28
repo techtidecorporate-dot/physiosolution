@@ -55,7 +55,7 @@ const ContactPage = () => {
                     </p>
                 </div>
             </section>
-            
+
             {/* Main Content Section: Two Columns */}
             <section className="max-w-7xl mx-auto px-8 mb-32">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -63,7 +63,7 @@ const ContactPage = () => {
                     <div className="bg-surface-container p-8 md:p-12 rounded-xl">
                         <h2 className="text-3xl font-headline font-bold text-primary mb-2">Kontaktieren Sie uns</h2>
                         <p className="text-on-surface-variant mb-8 font-medium">Wir freuen uns auf Ihre Nachricht und melden uns zeitnah bei Ihnen.</p>
-                        
+
                         {success ? (
                             <div className="bg-primary/10 border border-primary text-primary p-6 rounded-xl text-center font-bold">
                                 Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
@@ -73,56 +73,56 @@ const ContactPage = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="flex flex-col gap-2">
                                         <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Name</label>
-                                        <input 
+                                        <input
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
-                                            placeholder="Vorname Nachname" 
+                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none"
+                                            placeholder="Vorname Nachname"
                                             type="text"
                                         />
                                     </div>
                                     <div className="flex flex-col gap-2">
                                         <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">E-Mail</label>
-                                        <input 
+                                        <input
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
-                                            placeholder="beispiel@mail.ch" 
+                                            className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none"
+                                            placeholder="beispiel@mail.ch"
                                             type="email"
                                         />
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Mobilnummer</label>
-                                    <input 
+                                    <input
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
-                                        placeholder="07x xxx xx xx" 
+                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none"
+                                        placeholder="07x xxx xx xx"
                                         type="tel"
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold px-1">Nachricht</label>
-                                    <textarea 
+                                    <textarea
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none" 
-                                        placeholder="Wie können wir Ihnen helfen?" 
+                                        className="w-full px-4 py-3 rounded-xl border-none ring-1 ring-outline-variant/15 focus:ring-2 focus:ring-[#166E41] bg-surface-container-lowest transition-all outline-none"
+                                        placeholder="Wie können wir Ihnen helfen?"
                                         rows="4"
                                     ></textarea>
                                 </div>
-                                <button 
+                                <button
                                     disabled={loading}
-                                    className="mt-4 bg-[#166E41] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl active:scale-[0.98] transition-all flex justify-center items-center gap-2 disabled:opacity-50" 
+                                    className="mt-4 bg-[#166E41] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl active:scale-[0.98] transition-all flex justify-center items-center gap-2 disabled:opacity-50"
                                     type="submit"
                                 >
                                     {loading ? 'Wird gesendet...' : 'Nachricht senden'}
@@ -143,8 +143,8 @@ const ContactPage = () => {
                                     <div>
                                         <h4 className="font-bold text-lg text-on-surface">Administration &amp; Post</h4>
                                         <p className="text-on-surface-variant leading-relaxed font-semibold">Keine Praxis vor Ort – nur Büro / Administration</p>
-                                        <p className="text-on-surface-variant leading-relaxed">Steinfeldstrasse 15a<br/>8153 Rümlang</p>
-                                        <p className="text-on-surface-variant leading-relaxed mt-2 text-sm italic">Hausbesuche in Bülach,<br/>Zürcher Unterland &amp; Umgebung</p>
+                                        <p className="text-on-surface-variant leading-relaxed">Steinfeldstrasse 15a<br />8153 Rümlang</p>
+                                        <p className="text-on-surface-variant leading-relaxed mt-2 text-sm italic">Hausbesuche in Bülach,<br />Zürcher Unterland &amp; Umgebung</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">

@@ -92,7 +92,7 @@ const ConceptPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#166E41]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              
+
               {/* Floating Highlight Card */}
               <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-2xl border border-[#166E41]/5 max-w-[240px] animate-float">
                 <span className="material-symbols-outlined text-[#22BB11] text-4xl mb-4">clinical_notes</span>

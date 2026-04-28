@@ -23,7 +23,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 w-full z-[100] bg-[#166E41] shadow-xl border-b border-white/5 font-manrope">
+        <header className="sticky top-0 w-full z-[100] bg-gradient-to-r from-[#166E41] to-[#1a7a4a] shadow-xl border-b border-white/5 font-manrope">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-3 lg:py-5 flex justify-between items-center">
 
                 {/* LOGO AREA */}
@@ -32,11 +32,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2.5 lg:gap-3 decoration-none group transition-transform duration-300 hover:scale-[1.02]"
                 >
-                    <img src={Logo} alt="PhysioSolutions Logo" className="h-8 lg:h-12 w-auto object-contain" />
-                    <div className=" leading-none scale-90 lg:scale-100 origin-left">
-                        <span className="text-lg lg:text-xl font-black tracking-tighter text-white">PHYSIO</span>
-                        <span className="text-lg lg:text-xl font-bold  text-[#50CB61]">SOLUTIONS.CH</span>
-                    </div>
+                    <img src={Logo} alt="PhysioSolutions Logo" className="h-12 lg:h-16 w-auto object-contain drop-shadow-md transition-transform duration-500 hover:scale-105" />
                 </Link>
 
                 {/* DESKTOP NAV */}

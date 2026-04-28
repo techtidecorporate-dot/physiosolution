@@ -23,13 +23,13 @@ const About = () => {
                         <p className="text-cyan-100 font-medium text-lg">Physiotherapist with 25 years of experience</p>
 
                         <p className="text-cyan-100 leading-relaxed">Specialized in mobile physiotherapy, home visits, and complex care situations in Bülach and the Zürcher Unterland.</p>
-                        
+
                         <div className="pt-4 space-y-4">
-                          <div>
-                            <h3 className="text-cyan-100 font-bold text-sm uppercase tracking-widest mb-2">Philosophy</h3>
-                            <p className="text-cyan-100 leading-relaxed font-semibold">Calm. Structured. Practical.</p>
-                            <p className="text-cyan-100 leading-relaxed text-sm">My work focuses on improving safety, mobility, and independence in real-life environments — not just treating symptoms, but supporting meaningful recovery.</p>
-                          </div>
+                            <div>
+                                <h3 className="text-cyan-100 font-bold text-sm uppercase tracking-widest mb-2">Philosophy</h3>
+                                <p className="text-cyan-100 leading-relaxed font-semibold">Calm. Structured. Practical.</p>
+                                <p className="text-cyan-100 leading-relaxed text-sm">My work focuses on improving safety, mobility, and independence in real-life environments — not just treating symptoms, but supporting meaningful recovery.</p>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-3 pt-4">

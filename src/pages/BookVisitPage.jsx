@@ -35,7 +35,7 @@ const BookVisitPage = () => {
         try {
             const appointmentsRef = ref(db, 'appointments');
             const newAppointmentRef = push(appointmentsRef);
-            
+
             await set(newAppointmentRef, {
                 ...formData,
                 prescriptionFile: fileData, // Saved as Base64 string in JSON
@@ -45,7 +45,7 @@ const BookVisitPage = () => {
 
             setSuccess(true);
             setFormData({
-                name: '', email: '', phone: '', date: '', 
+                name: '', email: '', phone: '', date: '',
                 verordnung: 'nein', service: 'Neurologische Erkrankungen', notes: ''
             });
             setFileData(null);
@@ -93,25 +93,25 @@ const BookVisitPage = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Vollständiger Name</label>
-                                    <input 
+                                    <input
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium" 
-                                        placeholder="Vorname Nachname" 
+                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium"
+                                        placeholder="Vorname Nachname"
                                         type="text"
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">E-Mail Adresse</label>
-                                    <input 
+                                    <input
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium" 
-                                        placeholder="beispiel@mail.ch" 
+                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium"
+                                        placeholder="beispiel@mail.ch"
                                         type="email"
                                     />
                                 </div>
@@ -119,33 +119,33 @@ const BookVisitPage = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Telefonnummer</label>
-                                    <input 
+                                    <input
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium" 
-                                        placeholder="+41 00 000 00 00" 
+                                        className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium"
+                                        placeholder="+41 00 000 00 00"
                                         type="tel"
                                     />
                                 </div>
                                 <div className="space-y-4">
                                     <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1 block mb-2">Wunschdatum auswählen</label>
-                                    
+
                                     <div className="p-4 bg-surface-container-low rounded-2xl border border-outline-variant/30">
                                         <div className="flex items-center justify-between mb-4 px-2">
                                             <span className="font-bold text-lg text-on-surface">
                                                 {new Intl.DateTimeFormat('de-CH', { month: 'long', year: 'numeric' }).format(currentCalendarDate)}
                                             </span>
                                             <div className="flex gap-2">
-                                                <button 
+                                                <button
                                                     type="button"
                                                     onClick={() => setCurrentCalendarDate(new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth() - 1, 1))}
                                                     className="p-2 hover:bg-surface-container rounded-xl transition-colors border border-outline-variant/20"
                                                 >
                                                     <span className="material-symbols-outlined text-sm">chevron_left</span>
                                                 </button>
-                                                <button 
+                                                <button
                                                     type="button"
                                                     onClick={() => setCurrentCalendarDate(new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth() + 1, 1))}
                                                     className="p-2 hover:bg-surface-container rounded-xl transition-colors border border-outline-variant/20"
@@ -167,7 +167,7 @@ const BookVisitPage = () => {
                                                 const d = new Date(currentCalendarDate.getFullYear(), currentCalendarDate.getMonth(), day);
                                                 const isSelected = selectedDay && d.toDateString() === selectedDay.toDateString();
                                                 const isToday = d.toDateString() === new Date().toDateString();
-                                                const isPast = d < new Date(new Date().setHours(0,0,0,0));
+                                                const isPast = d < new Date(new Date().setHours(0, 0, 0, 0));
 
                                                 return (
                                                     <button
@@ -179,11 +179,10 @@ const BookVisitPage = () => {
                                                             setSelectedTime('');
                                                             setFormData({ ...formData, date: d.toLocaleDateString('de-CH') });
                                                         }}
-                                                        className={`p-2.5 text-sm rounded-xl transition-all relative group ${
-                                                            isSelected ? 'bg-[#166E41] text-white font-bold shadow-lg shadow-[#166E41]/30 rotate-3' : 
-                                                            isPast ? 'text-on-surface-variant/20 cursor-not-allowed' :
-                                                            'hover:bg-[#166E41]/10 text-on-surface font-medium border border-transparent hover:border-[#166E41]/20'
-                                                        }`}
+                                                        className={`p-2.5 text-sm rounded-xl transition-all relative group ${isSelected ? 'bg-[#166E41] text-white font-bold shadow-lg shadow-[#166E41]/30 rotate-3' :
+                                                                isPast ? 'text-on-surface-variant/20 cursor-not-allowed' :
+                                                                    'hover:bg-[#166E41]/10 text-on-surface font-medium border border-transparent hover:border-[#166E41]/20'
+                                                            }`}
                                                     >
                                                         {day}
                                                         {isToday && !isSelected && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#166E41] rounded-full" />}
@@ -206,11 +205,10 @@ const BookVisitPage = () => {
                                                             setSelectedTime(slot);
                                                             setFormData({ ...formData, date: `${selectedDay.toLocaleDateString('de-CH')} um ${slot} Uhr` });
                                                         }}
-                                                        className={`py-3 px-2 text-xs font-bold rounded-xl transition-all border ${
-                                                            selectedTime === slot 
-                                                            ? 'bg-[#166E41] text-white border-[#166E41] shadow-md -translate-y-1' 
-                                                            : 'bg-surface border-outline-variant/30 text-on-surface-variant hover:border-[#166E41] hover:text-[#166E41] hover:bg-[#166E41]/5'
-                                                        }`}
+                                                        className={`py-3 px-2 text-xs font-bold rounded-xl transition-all border ${selectedTime === slot
+                                                                ? 'bg-[#166E41] text-white border-[#166E41] shadow-md -translate-y-1'
+                                                                : 'bg-surface border-outline-variant/30 text-on-surface-variant hover:border-[#166E41] hover:text-[#166E41] hover:bg-[#166E41]/5'
+                                                            }`}
                                                     >
                                                         {slot}
                                                     </button>
@@ -227,24 +225,24 @@ const BookVisitPage = () => {
                                 </label>
                                 <div className="flex gap-8 px-1">
                                     <label className="flex items-center gap-2 cursor-pointer group font-medium">
-                                        <input 
-                                            type="radio" 
-                                            name="verordnung" 
+                                        <input
+                                            type="radio"
+                                            name="verordnung"
                                             value="ja"
                                             checked={formData.verordnung === 'ja'}
                                             onChange={handleChange}
-                                            className="w-5 h-5 accent-[#166E41]" 
+                                            className="w-5 h-5 accent-[#166E41]"
                                         />
                                         <span>Ja</span>
                                     </label>
                                     <label className="flex items-center gap-2 cursor-pointer group font-medium">
-                                        <input 
-                                            type="radio" 
-                                            name="verordnung" 
-                                            value="nein" 
+                                        <input
+                                            type="radio"
+                                            name="verordnung"
+                                            value="nein"
                                             checked={formData.verordnung === 'nein'}
                                             onChange={handleChange}
-                                            className="w-5 h-5 accent-[#166E41]" 
+                                            className="w-5 h-5 accent-[#166E41]"
                                         />
                                         <span>Nein</span>
                                     </label>
@@ -252,11 +250,11 @@ const BookVisitPage = () => {
                                 {formData.verordnung === 'ja' && (
                                     <div className="mt-4 px-1 animate-in fade-in slide-in-from-top-2 duration-300">
                                         <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant block mb-2">Verordnung hochladen</label>
-                                        <input 
-                                            type="file" 
+                                        <input
+                                            type="file"
                                             onChange={handleFileChange}
                                             required
-                                            className="block w-full text-sm text-on-surface-variant file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-[#166E41]/10 file:text-[#166E41] hover:file:bg-[#166E41]/20 transition-all cursor-pointer" 
+                                            className="block w-full text-sm text-on-surface-variant file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-[#166E41]/10 file:text-[#166E41] hover:file:bg-[#166E41]/20 transition-all cursor-pointer"
                                         />
                                         <p className="mt-2 text-[10px] text-on-surface-variant/60 font-medium">Bitte laden Sie Ihre ärztliche Verordnung als PDF oder Bild hoch.</p>
                                     </div>
@@ -264,7 +262,7 @@ const BookVisitPage = () => {
                             </div>
                             <div className="space-y-2 pt-2">
                                 <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Gewünschte Leistung</label>
-                                <select 
+                                <select
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
@@ -280,25 +278,25 @@ const BookVisitPage = () => {
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Zusätzliche Informationen</label>
-                                <textarea 
+                                <textarea
                                     name="notes"
                                     value={formData.notes}
                                     onChange={handleChange}
-                                    className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium" 
-                                    placeholder="Beschreiben Sie kurz Ihr Anliegen oder bestehende Diagnosen..." 
+                                    className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-medium"
+                                    placeholder="Beschreiben Sie kurz Ihr Anliegen oder bestehende Diagnosen..."
                                     rows="4"
                                 ></textarea>
                             </div>
-                            <button 
+                            <button
                                 disabled={loading}
-                                className="w-full bg-[#166E41] hover:bg-[#125a35] text-white py-5 rounded-xl font-black text-lg shadow-xl transition-all active:scale-95 disabled:opacity-50" 
+                                className="w-full bg-[#166E41] hover:bg-[#125a35] text-white py-5 rounded-xl font-black text-lg shadow-xl transition-all active:scale-95 disabled:opacity-50"
                                 type="submit"
                             >
                                 {loading ? 'Wird gesendet...' : 'Terminanfrage absenden'}
                             </button>
                         </form>
                     )}
-                    
+
                     <div className="mt-12 pt-8 border-t border-outline-variant grid grid-cols-1 sm:grid-cols-2 gap-8">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-[#166E41]">

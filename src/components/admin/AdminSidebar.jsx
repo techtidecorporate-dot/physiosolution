@@ -21,11 +21,8 @@ const AdminSidebar = ({ isSidebarOpen, activeTab, setActiveTab }) => {
             animate={{ opacity: 1 }}
             className="flex flex-col items-center"
           >
-            <img src={Logo} alt="Physio Solution Logo" className="h-10 w-auto object-contain mb-2" />
-            <div className="leading-none text-center">
-              <span className="text-lg font-black tracking-tighter text-on-surface">PHYSIO</span>
-              <span className="text-lg font-bold text-[#50CB61]">SOLUTION.CH</span>
-            </div>
+            <img src={Logo} alt="Physio Solution Logo" className="h-16 w-auto object-contain mb-4 drop-shadow-md" />
+
           </motion.div>
         ) : (
           <img src={Logo} alt="Logo" className="w-8 h-8 object-contain" />

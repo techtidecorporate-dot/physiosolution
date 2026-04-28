@@ -6,27 +6,27 @@ const ImprintPage = () => {
       {/* Header Section */}
       <section className="bg-[#F8FAF9] pt-32 pb-20 px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#166E41]/10 text-[#166E41] text-xs font-black tracking-[0.2em] uppercase mb-8">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#72B922]/10 text-[#72B922] text-xs font-black tracking-[0.2em] uppercase mb-8">
             Rechtliche Hinweise
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-[#166E41] tracking-tighter leading-none mb-6">
+          <h1 className="text-5xl md:text-7xl font-black text-[#72B922] tracking-tighter leading-none mb-6">
             Impressum
           </h1>
           <p className="text-xl text-black/60 font-medium">
-            Anbieter und Websitebetreiber von PhysioSolutions.
+            Anbieter und Websitebetreiber von PhysioSolutions.CH
           </p>
         </div>
       </section>
 
       {/* Content Section */}
       <section className="py-24 px-8 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#166E41]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#72B922]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
         <div className="max-w-4xl mx-auto space-y-20 relative z-10">
 
           {/* Anbieter / Websitebetreiber */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Anbieter / Websitebetreiber</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Anbieter / Websitebetreiber</h2>
             <div className="md:col-span-2 text-lg text-black/80 font-medium leading-relaxed">
               <p className="font-black text-xl text-black mb-2 uppercase tracking-tight">PhysioHealth GmbH</p>
               <p>Peter Ulshöfer</p>
@@ -39,19 +39,19 @@ const ImprintPage = () => {
 
           {/* Kontakt */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Kontakt</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Kontakt</h2>
             <div className="md:col-span-2 space-y-4 text-lg text-black/80 font-medium leading-relaxed">
               <p className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#166E41] font-variation-light">phone</span>
+                <span className="material-symbols-outlined text-[#72B922] font-variation-light">phone</span>
                 Telefon: 078 336 55 40 / 044 861 10 61
               </p>
               <p className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#166E41] font-variation-light">mail</span>
-                E-Mail: <a href="mailto:info@physiosolutions.ch" className="text-[#166E41] underline underline-offset-4 decoration-[#166E41]/20 hover:decoration-[#166E41] transition-all">info@physiosolutions.ch</a>
+                <span className="material-symbols-outlined text-[#72B922] font-variation-light">mail</span>
+                E-Mail: <a href="mailto:info@physiosolutions.ch" className="text-[#72B922] underline underline-offset-4 decoration-[#72B922]/20 hover:decoration-[#72B922] transition-all">info@physiosolutions.ch</a>
               </p>
               <p className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#166E41] font-variation-light">language</span>
-                Webauftritt: <a href="https://www.physiosolutions.ch" className="text-[#166E41] underline underline-offset-4 decoration-[#166E41]/20 hover:decoration-[#166E41] transition-all">https://www.physiosolutions.ch</a>
+                <span className="material-symbols-outlined text-[#72B922] font-variation-light">language</span>
+                Webauftritt: <a href="https://www.physiosolutions.ch" className="text-[#72B922] underline underline-offset-4 decoration-[#72B922]/20 hover:decoration-[#72B922] transition-all">https://www.physiosolutions.ch</a>
               </p>
             </div>
           </div>
@@ -60,11 +60,10 @@ const ImprintPage = () => {
 
           {/* Handelsregister / UID */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Handelsregister / UID</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Handelsregister / UID</h2>
             <div className="md:col-span-2 text-lg text-black/80 font-medium leading-relaxed italic opacity-60">
-              <p>Handelsregister-Nummer: [bitte gemäss Handelsregisterauszug ergänzen]</p>
-              <p>UID: [bitte amtlich ergänzen]</p>
-              <p>MWST: [nur angeben, falls MWST-registriert]</p>
+              <p>Handelsregister-Nummer: CH-020.4.086.191-1</p>
+              <p>UID/MWST: CHE-188.764.456</p>
             </div>
           </div>
 
@@ -72,7 +71,7 @@ const ImprintPage = () => {
 
           {/* Verantwortlich für den Inhalt */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Redaktionell Verantwortlich</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Redaktionell Verantwortlich</h2>
             <div className="md:col-span-2 text-lg text-black/80 font-medium leading-relaxed">
               <p>Verantwortlich für den Inhalt:</p>
               <p className="font-bold text-black mt-2">Peter Ulshöfer</p>
@@ -84,7 +83,7 @@ const ImprintPage = () => {
 
           {/* Haftungsausschluss */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Haftungsausschluss</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Haftungsausschluss</h2>
             <div className="md:col-span-2 space-y-12 text-black/70 leading-relaxed font-normal">
               <div>
                 <h3 className="text-black font-black text-xl mb-4 tracking-tight">Eigene Inhalte</h3>
@@ -105,7 +104,7 @@ const ImprintPage = () => {
 
           {/* Urheberrecht */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Urheberrecht</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Urheberrecht</h2>
             <div className="md:col-span-2 text-lg text-black/70 leading-relaxed font-normal">
               <p>
                 Die Inhalte dieser Website (Texte, Bilder, Fotos, Videos, Dateien, grafische Darstellungen) sind urheberrechtlich geschützt. Durch das Herunterladen, Speichern oder Kopieren werden keine Rechte übertragen. Jede Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Nutzung ausserhalb der gesetzlichen Schranken bedarf der vorgängigen schriftlichen Zustimmung von PhysioHealth GmbH. In der Schweiz entsteht der urheberrechtliche Schutz grundsätzlich automatisch mit der Schöpfung; auch Fotografien ohne individuellen Charakter sind geschützt.
@@ -117,7 +116,7 @@ const ImprintPage = () => {
 
           {/* Bildrechte */}
           <div className="grid md:grid-cols-3 gap-10">
-            <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Bildrechte / Visualisierungen</h2>
+            <h2 className="text-sm font-black uppercase tracking-widest text-[#72B922]/40 pt-1">Bildrechte / Visualisierungen</h2>
             <div className="md:col-span-2 text-lg text-black/70 leading-relaxed font-normal">
               <p>
                 Die auf dieser Website verwendeten Inhalte stammen aus rechtmässig nutzbaren Quellen. Sofern Inhalte durch externe Dienstleister erstellt wurden, erfolgte dies auf deren fachliche Verantwortung. PhysioHealth GmbH behält sich bei Beanstandungen durch Dritte die unverzügliche Entfernung der betroffenen Inhalte sowie sämtliche Rückgriffsrechte gegenüber dem verantwortlichen Dienstleister vor.
@@ -128,7 +127,7 @@ const ImprintPage = () => {
           </div>
 
           <div className="pt-20 text-xs font-black uppercase tracking-widest text-black/30 border-t border-black/5">
-            Stand: 07.04.2026
+            Stand: 28.04.2026
           </div>
 
         </div>

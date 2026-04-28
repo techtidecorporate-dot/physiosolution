@@ -4,7 +4,7 @@ import Logo from '../../public/images/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="relative bg-[#166E41] pt-16 pb-10 text-white font-manrope overflow-hidden">
+        <footer className="relative bg-gradient-to-b from-[#166E41] to-[#0f4d2e] pt-16 pb-10 text-white font-manrope overflow-hidden">
 
             {/* Premium Gradient Overlays */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -20,11 +20,8 @@ const Footer = () => {
                     <div className="lg:col-span-4 flex flex-col gap-10">
                         <div className="flex flex-col gap-8">
                             <Link to="/" className="flex items-center gap-4 decoration-none hover:opacity-80 transition-opacity">
-                                <img src={Logo} alt="PhysioSolutions Logo" className="h-12 lg:h-16 w-auto object-contain" />
-                                <div className=" leading-none">
-                                    <span className="text-xl lg:text-2xl font-black tracking-tighter text-white uppercase">Physio</span>
-                                    <span className="text-xl lg:text-2xl font-bold text-[#50CB61] uppercase">Solution</span>
-                                </div>
+                                <img src={Logo} alt="PhysioSolutions Logo" className="h-16 lg:h-24 w-auto object-contain drop-shadow-md transition-transform duration-500 hover:scale-105" />
+
                             </Link>
                             <p className="text-white/70 text-lg leading-relaxed max-w-sm font-medium">
                                 Spezialisierte mobile Physiotherapie in Bülach und im gesamten Zürcher Unterland – professionell, individuell und in Ihrem gewohnten Umfeld.
@@ -102,7 +99,8 @@ const Footer = () => {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-10">
                     <div className="flex items-center gap-6">
                         <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">
-                            © 2026 Physio Solution. Alle Rechte vorbehalten.            </p>
+                            © 2026 Physio Solutions. Alle Rechte vorbehalten.
+                        </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
@@ -110,6 +108,12 @@ const Footer = () => {
                         <Link to="/privacy-policy" className="hover:text-white transition-colors">Datenschutz</Link>
                         <Link to="/terms-conditions" className="hover:text-white transition-colors">AGB</Link>
                     </div>
+                </div>
+
+                <div className="mt-12 text-center">
+                    <p className="text-[9px] font-black uppercase tracking-[0.4em] text-white/15">
+                        Designed and developed by <a href="https://techtidecorporate.com/" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors">TechTide Corporate LLP - Lahore, Pakistan</a>
+                    </p>
                 </div>
 
             </div>

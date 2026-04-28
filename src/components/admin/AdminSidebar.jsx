@@ -24,7 +24,7 @@ const AdminSidebar = ({ isSidebarOpen, activeTab, setActiveTab }) => {
             <img src={Logo} alt="Physio Solution Logo" className="h-10 w-auto object-contain mb-2" />
             <div className="leading-none text-center">
               <span className="text-lg font-black tracking-tighter text-on-surface">PHYSIO</span>
-              <span className="text-lg font-bold text-[#50CB61]">SOLUTIONS.CH</span>
+              <span className="text-lg font-bold text-[#50CB61]">SOLUTION.CH</span>
             </div>
           </motion.div>
         ) : (

@@ -21,9 +21,9 @@ const PrivacyPolicyPage = () => {
       {/* Content Section */}
       <section className="py-24 px-8 overflow-hidden relative">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#166E41]/5 blur-[120px] rounded-full -translate-y-1/2 -translate-x-1/2"></div>
-        
+
         <div className="max-w-4xl mx-auto space-y-20 relative z-10">
-          
+
           {/* Punkt 1 */}
           <div className="grid md:grid-cols-3 gap-10">
             <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">01. Datenschutz auf einen Blick</h2>

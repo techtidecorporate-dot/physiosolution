@@ -29,7 +29,7 @@ const TermsPage = () => {
       {/* Content Section */}
       <section className="py-24 px-8 overflow-hidden relative">
         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#166E41]/3 blur-[150px] rounded-full translate-x-1/2"></div>
-        
+
         <div id="physio" className="max-w-4xl mx-auto space-y-20 relative z-10">
           <div className="space-y-6">
             <h2 className="text-sm font-black uppercase tracking-[0.3em] text-[#166E41] mb-12 flex items-center gap-4">

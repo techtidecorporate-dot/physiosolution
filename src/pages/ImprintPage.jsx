@@ -13,7 +13,7 @@ const ImprintPage = () => {
             Impressum
           </h1>
           <p className="text-xl text-black/60 font-medium">
-            Anbieter und Websitebetreiber von Physio Solution.
+            Anbieter und Websitebetreiber von PhysioSolutions.
           </p>
         </div>
       </section>
@@ -21,9 +21,9 @@ const ImprintPage = () => {
       {/* Content Section */}
       <section className="py-24 px-8 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#166E41]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        
+
         <div className="max-w-4xl mx-auto space-y-20 relative z-10">
-          
+
           {/* Anbieter / Websitebetreiber */}
           <div className="grid md:grid-cols-3 gap-10">
             <h2 className="text-sm font-black uppercase tracking-widest text-[#166E41]/40 pt-1">Anbieter / Websitebetreiber</h2>

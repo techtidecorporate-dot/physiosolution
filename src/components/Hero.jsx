@@ -19,19 +19,19 @@ const Hero = () => {
                     {/* Paragraphs with precise styling */}
                     <div className="space-y-6 text-base sm:text-lg lg:text-xl font-medium leading-relaxed max-w-3xl">
                         <p className="italic text-[#166E41] font-bold">
-                            Physiotherapie bei Ihnen zu Hause – praktisch, unkompliziert und freundlich.
+                            Physiotherapie bei Ihnen zu Hause – individuell, fachkompetent und in Ihrem vertrauten Umfeld.
                         </p>
 
                         <p className="text-gray-600">
-                            Unser Versorgungskonzept ist Ihr Zuhause. Wir bieten physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland an. Die Behandlung erfolgt bei Ihnen zu Hause, im Alterszentrum oder im Pflegeheim.
+                            Ihr Zuhause ist der Mittelpunkt unserer physiotherapeutischen Begleitung. Wir bieten physiotherapeutische Domizilbehandlungen in Bülach und im Zürcher Unterland an. Die Behandlung erfolgt bei Ihnen zu Hause, im Alterszentrum oder im Pflegeheim.
                         </p>
 
                         <p className="text-gray-600">
-                            Sicher und sorgenfrei zur Physiotherapie – ohne öffentliche Verkehrsmittel, ohne Taxi und ohne eigenes Auto. Unsere Aufmerksamkeit gilt Ihrer Gesundheit im gewohnten Umfeld und der Wiederherstellung Ihrer Alltagsfähigkeit – für ein gutes Gefühl bei Ihnen als Patient:in und für Ihre Angehörigen.
+                            Der Weg zur Physiotherapie wird dadurch sicher, einfach und alltagsnah – ohne öffentliche Verkehrsmittel, ohne Taxi und ohne eigenes Auto. Im Mittelpunkt stehen Ihre Gesundheit im gewohnten Umfeld sowie die gezielte Wiederherstellung Ihrer Alltagsfähigkeit – für ein gutes Gefühl bei Ihnen als Patient:in und bei Ihren Angehörigen.
                         </p>
 
                         <p className="text-gray-600">
-                            Physiotherapie bedeutet für uns, Menschen dort zu begleiten, wo ihr Leben stattfindet. Nicht isoliert im Therapieraum, sondern im vertrauten Umfeld, im Alltag und im sozialen Leben. Ziel ist es, Sicherheit, Selbstvertrauen und Lebensqualität wiederzuerlangen.
+                            Physiotherapie bedeutet für uns, Menschen dort zu begleiten, wo ihr Leben stattfindet: nicht isoliert im Therapieraum, sondern im vertrauten Umfeld, im Alltag und im sozialen Leben. Ziel ist es, Sicherheit, Selbstvertrauen und Lebensqualität Schritt für Schritt zurückzugewinnen.
                         </p>
                     </div>
 

@@ -8,29 +8,36 @@ const About = () => {
                     <div className="relative rounded-3xl overflow-hidden glass-card border border-white/20">
                         <img
                             src="/images/therapist.png"
-                            alt="Peter Ulshöfer – Physiotherapeut"
+                            alt="Peter Ulshöfer – Physiotherapist"
                             className="w-full h-full object-cover object-top"
                         />
                         <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#50CB61] via-[#22BB11] to-[#166E41] rounded-3xl p-5 text-white shadow-2xl">
                             <p className="text-3xl font-bold">25</p>
-                            <p className="text-sm mt-1">Jahre Erfahrung</p>
+                            <p className="text-sm mt-1">Years Experience</p>
                         </div>
                     </div>
 
                     <div className="space-y-6">
-                        <p className="text-cyan-200 font-semibold text-xs uppercase tracking-widest">Über mich</p>
+                        <p className="text-cyan-200 font-semibold text-xs uppercase tracking-widest">Personal Profile</p>
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-white">Peter Ulshöfer</h2>
-                        <p className="text-cyan-100 font-medium text-lg">Dipl. Physiotherapeut HF</p>
+                        <p className="text-cyan-100 font-medium text-lg">Physiotherapist with 25 years of experience</p>
 
-                        <p className="text-cyan-100 leading-relaxed">Ich bin Physiotherapeut mit 25 Jahren Berufserfahrung und begleite seit vielen Jahren Menschen im Zürcher Unterland, insbesondere in Bülach, im Rahmen von Physiotherapie im häuslichen Umfeld.</p>
-                        <p className="text-cyan-100 leading-relaxed">Meine Schwerpunkte liegen in der Neurologie, Schwindeltherapie, Atemtherapie, Geriatrie, Lymphologie, Onkologie sowie in der Begleitung von Menschen mit chronischen Wunden und hohem Pflegebedarf. Ich arbeite ruhig, strukturiert und alltagsnah – besonders bei komplexen Erkrankungen und sensiblen Lebenssituationen.</p>
+                        <p className="text-cyan-100 leading-relaxed">Specialized in mobile physiotherapy, home visits, and complex care situations in Bülach and the Zürcher Unterland.</p>
+                        
+                        <div className="pt-4 space-y-4">
+                          <div>
+                            <h3 className="text-cyan-100 font-bold text-sm uppercase tracking-widest mb-2">Philosophy</h3>
+                            <p className="text-cyan-100 leading-relaxed font-semibold">Calm. Structured. Practical.</p>
+                            <p className="text-cyan-100 leading-relaxed text-sm">My work focuses on improving safety, mobility, and independence in real-life environments — not just treating symptoms, but supporting meaningful recovery.</p>
+                          </div>
+                        </div>
 
                         <div className="grid grid-cols-2 gap-3 pt-4">
                             {[
-                                { label: 'SRK anerkannt', icon: 'verified' },
-                                { label: 'Kassenzugelassen', icon: 'health_and_safety' },
-                                { label: 'EMR zertifiziert', icon: 'workspace_premium' },
-                                { label: 'CH-weit im Einsatz', icon: 'location_on' },
+                                { label: 'Neurological rehabilitation', icon: 'neurology' },
+                                { label: 'Geriatrics', icon: 'elderly' },
+                                { label: 'Respiratory therapy', icon: 'respiratory_rate' },
+                                { label: 'Oncology & lymphology', icon: 'clinical_notes' },
                             ].map((item, index) => (
                                 <div key={index} className="flex items-center gap-2 bg-[#0d1735]/70 rounded-xl p-3 shadow-lg border border-cyan-300/20">
                                     <span className="material-symbols-outlined text-cyan-100">{item.icon}</span>
@@ -40,7 +47,7 @@ const About = () => {
                         </div>
 
                         <div className="pt-4">
-                            <button className="gradient-btn px-8 py-3 rounded-full font-semibold shadow-xl hover:brightness-110 transition duration-200">Kontakt aufnehmen</button>
+                            <button className="gradient-btn px-8 py-3 rounded-full font-semibold shadow-xl hover:brightness-110 transition duration-200">Get in touch</button>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SupportImage from '../../public/images/professional_care.webp'
 const ForRelatives = () => {
     return (
         <section id="relatives" className="bg-white py-32 scroll-mt-20">
@@ -11,28 +11,28 @@ const ForRelatives = () => {
                         <span className="flex gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span><span className="w-1.5 h-1.5 rounded-full bg-[#166E41]/20"></span></span>
                     </span>
                     <h2 className="text-5xl lg:text-7xl font-headline font-black text-[#166E41] tracking-tighter leading-tight mb-8">
-                        Unterstützung &amp; <br/>Begleitung
+                        Unterstützung &amp; <br />Begleitung
                     </h2>
                     <p className="text-black text-xl leading-relaxed">
-                        Pflege bedeutet Nähe, Verantwortung und oft auch Belastung. Wenn Sie jemanden pflegen, sind auch Sie Teil der Therapie.
+                        Pflege bedeutet Nähe, Verantwortung und oft auch eine hohe Belastung. Wer einen nahestehenden Menschen zu Hause pflegt, braucht Sicherheit, Entlastung und Orientierung.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-video lg:aspect-auto">
-                        <img 
-                            src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=2070" 
-                            alt="Pflegende Angehörige Beratung" 
-                            className="w-full h-full object-cover" 
+                        <img
+                            src={SupportImage}
+                            alt="Pflegende Angehörige Beratung"
+                            className="w-full h-full object-cover"
                         />
                     </div>
 
                     <div className="space-y-6">
                         {[
-                            { icon: 'handshake', title: 'Unterstützung', description: 'Wir unterstützen Angehörige mit praxisnahen Tipps zur Entlastung.' },
-                            { icon: 'clinical_notes', title: 'Beratung', description: 'Beratung zu Transfers, Handling und Selbstschutz für eine rückengerechte Pflege.' },
-                            { icon: 'medical_services', title: 'Eigene Behandlung', description: 'Bei Bedarf behandeln wir auch Angehörige im Rahmen von Domizilbehandlungen.' },
-                            { icon: 'home_health', title: 'Alltagshilfe', description: 'Praktische Hilfe dort, wenn eigene Beschwerden durch die Pflege entstanden sind.' }
+                            { icon: 'handshake', title: 'Entlastung', description: 'Praxisnahe Tipps und konkrete Lösungen für Ihren Pflegealltag zu Hause.' },
+                            { icon: 'clinical_notes', title: 'Beratung', description: 'Anleitung zu Handling und Transfers für eine schonende und sichere Pflege.' },
+                            { icon: 'medical_services', title: 'Selbstschutz', description: 'Bewegungsstrategien, die Ihre eigene körperliche Belastung spürbar reduzieren.' },
+                            { icon: 'home_health', title: 'Eigene Behandlung', description: 'Physiotherapie bei Ihnen zu Hause, wenn die Pflege bereits Spuren hinterlassen hat.' }
                         ].map((item, index) => (
                             <div key={index} className="p-6 rounded-3xl border border-[#166E41]/10 bg-surface-container-low flex gap-6 items-start transition-all hover:shadow-lg">
                                 <div className="w-12 h-12 rounded-2xl bg-[#166E41]/10 text-[#166E41] flex items-center justify-center shrink-0">

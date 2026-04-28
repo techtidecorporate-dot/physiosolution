@@ -1,4 +1,6 @@
 import React from 'react';
+import FamilyImage from '../../public/images/Family.webp'
+import PhysioImage from '../../public/images/physio Integrating.jpg'
 
 const RelativesPage = () => {
     return (
@@ -9,10 +11,13 @@ const RelativesPage = () => {
                     <div className="z-10">
                         <span className="label-md uppercase tracking-widest text-primary font-bold text-xs mb-4 block">Unterstützung &amp; Begleitung</span>
                         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-on-background leading-tight mb-8">
-                            Präzise Versorgung für das <span className="text-primary">gesamte Umfeld.</span>
+                            Präzise Unterstützung für das <span className="text-primary">gesamte Umfeld.</span>
                         </h1>
+                        <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl font-bold">
+                            Für mehr Sicherheit, Entlastung und Orientierung im Alltag pflegender Angehöriger
+                        </p>
                         <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
-                            Pflege bedeutet Nähe, Verantwortung und oft auch Belastung. Wenn Sie Ihren Partner, Ihre Eltern, Ihr Kind oder eine nahestehende Person pflegen, sind auch Sie Teil der Therapie.
+                            Pflege bedeutet Nähe, Verantwortung und oft auch eine hohe körperliche und emotionale Belastung. Wer einen nahestehenden Menschen zu Hause begleitet und pflegt, trägt im Alltag oft weit mehr, als von außen sichtbar ist. Deshalb begleiten wir pflegende Angehörige nicht nur beratend, sondern mit praktischer, alltagsnaher und physiotherapeutisch fundierter Unterstützung direkt im häuslichen Umfeld.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-transform hover:scale-105">
@@ -27,7 +32,7 @@ const RelativesPage = () => {
                         {/* Abstract Circular Pattern Decoration */}
                         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary-fixed opacity-10 blur-3xl -z-10"></div>
                         <div className="rounded-[2.5rem] overflow-hidden shadow-2xl shadow-on-surface/10 aspect-[4/5] relative">
-                            <img className="w-full h-full object-cover" alt="Ein professioneller Physiotherapeut im Gespräch mit einem pflegenden Angehörigen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEapzTqAM8D6MRy4vWGgyfJQ1TjIyba5DulRrH4GH7IZ0Fx_CBt4BoxX2FEbs5CafHoBHvlDlZLjHrx3BDAAU03qsJMgWdJRpzIdYgfa0uN6r97rdDGGaIOkPq-tN9qNX4SXmLVPQPFdNc_hezQmu4hC-ROb5awgdr5d_ti-j-ZLkFOeobrEIUjaSIb5hQHJ8xoYw9kOKjVKim8Ca6zP-9iCT_NE2pFSDGkZLsvhirU5MxzlJUsUU6PSYG60iPfgo1L7sW34jkYCXx" />
+                            <img className="w-full h-full object-cover" alt="Ein professioneller Physiotherapeut im Gespräch mit einem pflegenden Angehörigen" src={FamilyImage} />
                         </div>
                         {/* Floating Stat Card */}
                         <div className="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-xl shadow-2xl max-w-xs">
@@ -45,13 +50,13 @@ const RelativesPage = () => {
             <section className="bg-surface-container-low py-32 px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-20 max-w-2xl">
-                        <h2 className="text-4xl font-bold tracking-tight text-on-background mb-6">Praxisnahe Tipps für die anspruchsvollste Rolle des Lebens.</h2>
+                        <h2 className="text-4xl font-bold tracking-tight text-on-background mb-6">Ganzheitliche Entlastung</h2>
                         <div className="space-y-4">
-                            <p className="text-on-surface-variant text-lg">
-                                Wir unterstützen Angehörige mit praxisnahen Tipps zur Entlastung, Beratung zu Transfers, Handling und Selbstschutz.
+                            <p className="text-on-surface-variant text-lg font-bold">
+                                Unterstützung für Menschen, die zu Hause die wichtigste Pflege leisten
                             </p>
-                            <p className="text-on-surface-variant text-lg pt-4 border-t border-[#166E41]/10">
-                                Bei Bedarf behandeln wir auch Angehörige im Rahmen von Domizilbehandlungen.
+                            <p className="text-on-surface-variant text-lg">
+                                Pflegende Angehörige übernehmen täglich Aufgaben, die Kraft, Aufmerksamkeit, Geduld und oft auch Improvisation verlangen. Gerade deshalb braucht es Unterstützung, die nicht theoretisch bleibt, sondern im Alltag wirklich trägt. Wir begleiten Angehörige mit praxisnahen Empfehlungen, klarer Anleitung und konkreten Lösungen für zu Hause. So entsteht mehr Sicherheit im Umgang, mehr Struktur im Alltag und mehr Vertrauen in die eigene Unterstützung.
                             </p>
                         </div>
                     </div>
@@ -60,8 +65,8 @@ const RelativesPage = () => {
                         <div className="md:col-span-8 bg-surface-container-lowest p-10 rounded-[2rem] shadow-sm hover:scale-[1.01] transition-transform flex flex-col justify-between group">
                             <div>
                                 <span className="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform block">transfer_within_a_station</span>
-                                <h3 className="text-3xl font-bold mb-4">Handling &amp; Transfers</h3>
-                                <p className="text-on-surface-variant text-lg mb-8 max-w-md">Erlernen Sie ergonomische Techniken, um Ihre Lieben sicher zu bewegen. Präzision in der Bewegung schützt sowohl den Patienten als auch Ihre eigene Gesundheit.</p>
+                                <h3 className="text-3xl font-bold mb-4">Handling & Transfers</h3>
+                                <p className="text-on-surface-variant text-lg mb-8 max-w-md">Wir zeigen Ihnen ergonomische und alltagsgerechte Techniken, mit denen Sie Ihre Angehörigen sicherer unterstützen können. Das schützt nicht nur die betreute Person, sondern auch Ihren Rücken, Ihre Gelenke und Ihre eigene körperliche Stabilität.</p>
                             </div>
                             <div className="flex gap-2">
                                 <span className="px-4 py-2 bg-primary-fixed/20 text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-wider">Ergonomie</span>
@@ -72,12 +77,12 @@ const RelativesPage = () => {
                         <div className="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-10 rounded-[2rem] flex flex-col items-center text-center justify-center">
                             <span className="material-symbols-outlined text-6xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>shield_with_heart</span>
                             <h3 className="text-2xl font-bold mb-4">Selbstschutz</h3>
-                            <p className="text-on-tertiary-container/80">Vermeidung von Burnout und körperlicher Belastung durch spezialisierte Bewegungsstrategien für Pflegende.</p>
+                            <p className="text-on-tertiary-container/80">Wir vermitteln Ihnen Bewegungsstrategien, die Ihre eigene Belastung reduzieren und helfen können, Überforderung im Alltag vorzubeugen.</p>
                         </div>
                         {/* Home Visits Card */}
                         <div className="md:col-span-4 bg-secondary-container text-on-secondary-container p-10 rounded-[2rem] shadow-sm flex flex-col justify-between">
                             <h3 className="text-2xl font-bold mb-4">Hausbesuche</h3>
-                            <p className="text-on-secondary-container/90 mb-8">Wir behandeln Angehörige zu Hause, wenn eigene Beschwerden durch die Pflege entstanden sind oder ein Praxisbesuch nicht möglich ist.</p>
+                            <p className="text-on-secondary-container/90 mb-8">Wir begleiten Angehörige direkt zu Hause, wenn Beschwerden durch die Pflege entstanden sind oder ein Praxisbesuch nicht möglich oder nicht sinnvoll ist.</p>
                             <span className="material-symbols-outlined text-5xl opacity-50">home_health</span>
                         </div>
                         {/* Quote/Mission Card */}
@@ -98,7 +103,7 @@ const RelativesPage = () => {
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
                     <div className="lg:w-1/2 relative">
                         <div className="absolute -bottom-10 -left-10 w-64 h-64 rounded-full bg-secondary opacity-5 blur-[80px]"></div>
-                        <img className="rounded-[2.5rem] shadow-2xl relative z-10" alt="Physiotherapeut demonstriert Übung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBle8g0TtOjoazCfItWqcWhzKPBXHzBlPIp8qUZ-TKNbjjkiKEF15Smi_vAf8p_l9QJ4T34dYAj0tzSUMHrNETa5wYzk4KrdBIBq8E1yYjpENhK1hoLQNBXVkqz7QMriey38CYTFwIOl1kjU396_6YFrP3TuxgdBkQ0989RyfZwWOV0qlwG52OP3SoLluZlmXYuh87vLDGkSrWO2Pfl_3hcaKsEt3zixEz-Kakaxbwr6YHGZCNITyVuoagl1UsfIyH4iWKHKG8qXDfS" />
+                        <img className="rounded-[2.5rem] shadow-2xl relative z-10" alt="Physiotherapeut demonstriert Übung" src={PhysioImage} />
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Integriertes Unterstützungssystem</h2>
@@ -109,7 +114,7 @@ const RelativesPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold mb-2">Empathische Begleitung</h4>
-                                    <p className="text-on-surface-variant">Bewältigung der emotionalen und physischen Komplexität der Langzeitpflege unter professioneller medizinischer Aufsicht.</p>
+                                    <p className="text-on-surface-variant">Wir begleiten Angehörige mit Respekt, Klarheit und einer Sprache, die verständlich bleibt. So entsteht eine Form der Unterstützung, die nicht zusätzlich belastet, sondern Orientierung und Vertrauen schafft.</p>
                                 </div>
                             </div>
                             <div className="flex gap-6">
@@ -118,7 +123,7 @@ const RelativesPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold mb-2">Körperliche Entlastung</h4>
-                                    <p className="text-on-surface-variant">Gezielte Physiotherapie für Angehörige, die durch Heben und tägliche Pflegeaufgaben Rücken-, Nacken- oder Gelenkprobleme entwickelt haben.</p>
+                                    <p className="text-on-surface-variant">Wir unterstützen bei Rücken-, Nacken- oder Gelenkbeschwerden, wenn der Pflegealltag bereits Spuren hinterlassen hat. Ziel ist es, Belastungen zu reduzieren, Beweglichkeit zu verbessern und die eigene körperliche Stabilität wieder zu stärken.</p>
                                 </div>
                             </div>
                             <div className="flex gap-6">
@@ -127,7 +132,7 @@ const RelativesPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold mb-2">Kontinuität zu Hause</h4>
-                                    <p className="text-on-surface-variant">Wenn ein Praxisbesuch keine Option ist, bringen wir Schweizer Präzisions-Physiotherapie direkt zu Ihnen nach Hause.</p>
+                                    <p className="text-on-surface-variant">Unsere mobile Physiotherapie bringt Fachkompetenz direkt in Ihr Zuhause und schafft eine kontinuierliche Begleitung dort, wo Pflege, Bewegung und Unterstützung tatsächlich stattfinden.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,8 +145,9 @@ const RelativesPage = () => {
                 <div className="max-w-5xl mx-auto bg-primary text-white p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20"></div>
                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-10 -mb-10"></div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10">Weil Ihre Gesundheit deren Gesundheit ermöglicht.</h2>
-                    <p className="text-on-primary-container text-lg mb-12 max-w-2xl mx-auto relative z-10">Warten Sie nicht, bis die Belastung zu einer chronischen Verletzung wird. Vereinbaren Sie noch heute eine professionelle Einschätzung für Ihren Pflegealltag.</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10">Weil Ihre Gesundheit Unterstützung ermöglicht</h2>
+                    <p className="text-on-primary-container text-lg mb-12 max-w-2xl mx-auto relative z-10 italic">Entlastung beginnt nicht erst, wenn Beschwerden chronisch werden</p>
+                    <p className="text-on-primary-container text-lg mb-12 max-w-2xl mx-auto relative z-10">Pflegende Angehörige werden im Alltag oft selbstverständlich mitgetragen, obwohl sie selbst an Belastungsgrenzen kommen. Unser Anspruch ist es, das frühzeitig zu erkennen und Sie nicht erst dann zu unterstützen, wenn aus Anstrengung bereits dauerhafte Beschwerden geworden sind. Wir helfen dabei, Pflege sicherer, schonender und tragfähiger zu gestalten — für die betreute Person und für Sie selbst.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
                         <button className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-on-primary-container transition-colors">Hausbesuch buchen</button>
                         <button className="bg-primary-container text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-container/80 transition-colors">Kontakt aufnehmen</button>

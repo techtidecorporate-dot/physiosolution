@@ -27,12 +27,12 @@ const Services = () => {
 
                     {/* Service Card Component Wrapper */}
                     {[
-                        { title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Verbesserung von Gangbild, Gleichgewicht und Selbstständigkeit bei Schlaganfall, Parkinson oder MS.' },
-                        { title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Alltagsnahe Therapie bei Lagerungsschwindel, Gangunsicherheit und vestibulären Störungen.' },
-                        { title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Unterstützung bei Fatigue und Lymphödemen durch manuelle Lymphdrainage und Belastungsaufbau.' },
-                        { title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Mobilitätserhalt und Sturzprophylaxe bei Altersgebrechlichkeit oder hohem Pflegebedarf.' },
-                        { title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Verbesserte Atemmechanik und Belastbarkeit bei COPD, Asthma oder Post-COVID-Symptomen.' },
-                        { title: 'Chronische Wunden', icon: 'healing', text: 'Begleitende Physiotherapie zur Förderung der Durchblutung und Mobilität bei Wundheilungsstörungen.' }
+                        { title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Gangbild, Gleichgewicht und Selbstständigkeit bei Schlaganfall, Parkinson oder MS.' },
+                        { title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Entlastung bei Lymphödemen durch manuelle Lymphdrainage und Belastungsaufbau.' },
+                        { title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Verbesserte Atemmechanik und Belastbarkeit bei COPD, Asthma oder Post-COVID.' },
+                        { title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Mobilitätserhalt und Sturzprophylaxe bei Altersgebrechlichkeit oder Pflegebedarf.' },
+                        { title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Sicherheit bei Lagerungsschwindel, Gangunsicherheit und vestibulären Störungen.' },
+                        { title: 'Chronische Wunden', icon: 'healing', text: 'Begleitende Physiotherapie zur Förderung der Durchblutung und Alltagsmobilität.' }
                     ].map((service, index) => (
                         <div key={index} className="group relative bg-[#f8faf9] p-10 rounded-[2.5rem] border border-slate-100 hover:border-[#22BB11]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#166E41]/10 transition-all duration-500 overflow-hidden">
 

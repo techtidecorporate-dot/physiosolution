@@ -55,7 +55,7 @@ const AdminLoginPage = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            placeholder="admin@vitality-swiss.ch"
+                            placeholder="admin@physiosolution.ch"
                             className="w-full px-5 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-[#166E41]/20 transition-all font-bold text-on-surface"
                         />
                     </div>

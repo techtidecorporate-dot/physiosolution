@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesPage = () => {
     return (
@@ -110,22 +111,26 @@ const ServicesPage = () => {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Bei neurologischen Erkrankungen wie Schlaganfall, Parkinson oder Multipler Sklerose unterstützen wir Sie dabei, Beweglichkeit, Koordination und Gleichgewicht zu verbessern.' },
-                            { title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Nach oder während einer onkologischen Behandlung begleiten wir Sie mit individuell abgestimmter Therapie: Manuelle Lymphdrainage und behutsamer Aufbau von Kraft.' },
-                            { title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Bei Atemwegserkrankungen wie COPD, Asthma oder nach COVID-19 helfen wir, die Atmung zu verbessern und die körperliche Belastbarkeit zu steigern.' },
-                            { title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Im höheren Alter steht der Erhalt der Selbstständigkeit im Mittelpunkt. Wir unterstützen Sie dabei, Mobilität zu erhalten, Stürze zu vermeiden und sich sicher zu bewegen.' },
-                            { title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Durch gezielte Therapie verbessern wir Gleichgewicht, Orientierung und Koordination, um wieder mehr Stabilität und Sicherheit im Alltag zu ermöglichen.' },
-                            { title: 'Chronische Wunden', icon: 'healing', text: 'Bei chronischen Wunden unterstützen wir den Heilungsprozess durch gezielte Bewegungsförderung und die Verbesserung der Durchblutung.' }
+                            { id: 'neurologische-erkrankungen', title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Bei neurologischen Erkrankungen wie Schlaganfall, Parkinson oder Multipler Sklerose unterstützen wir Sie dabei, Beweglichkeit, Koordination und Gleichgewicht zu verbessern.' },
+                            { id: 'onkologie-lymphologie', title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Nach oder während einer onkologischen Behandlung begleiten wir Sie mit individuell abgestimmter Therapie: Manuelle Lymphdrainage und behutsamer Aufbau von Kraft.' },
+                            { id: 'atemtherapie', title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Bei Atemwegserkrankungen wie COPD, Asthma oder nach COVID-19 helfen wir, die Atmung zu verbessern und die körperliche Belastbarkeit zu steigern.' },
+                            { id: 'geriatrie-pflege', title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Im höheren Alter steht der Erhalt der Selbstständigkeit im Mittelpunkt. Wir unterstützen Sie dabei, Mobilität zu erhalten, Stürze zu vermeiden und sich sicher zu bewegen.' },
+                            { id: 'schwindel-gleichgewicht', title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Durch gezielte Therapie verbessern wir Gleichgewicht, Orientierung und Koordination, um wieder mehr Stabilität und Sicherheit im Alltag zu ermöglichen.' },
+                            { id: 'chronische-wunden', title: 'Chronische Wunden', icon: 'healing', text: 'Bei chronischen Wunden unterstützen wir den Heilungsprozess durch gezielte Bewegungsförderung und die Verbesserung der Durchblutung.' }
                         ].map((s, i) => (
-                            <div key={i} className="group bg-white p-10 rounded-[3rem] hover:shadow-2xl hover:shadow-black/40 transition-all duration-700 relative flex flex-col h-full transform hover:-translate-y-2">
+                            <Link key={i} to={`/services/${s.id}`} className="group bg-white p-10 rounded-[3rem] hover:shadow-2xl hover:shadow-black/40 transition-all duration-700 relative flex flex-col h-full transform hover:-translate-y-2 decoration-none">
                                 <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-[#166E41] transition-all duration-500 shadow-inner">
                                     <span className="material-symbols-outlined text-[#166E41] group-hover:text-white text-3xl transition-colors">
                                         {s.icon}
                                     </span>
                                 </div>
                                 <h3 className="text-2xl font-black text-black mb-6 leading-tight tracking-tight">{s.title}</h3>
-                                <p className="text-black/60 text-base leading-relaxed font-bold">{s.text}</p>
-                            </div>
+                                <p className="text-black/60 text-base leading-relaxed font-bold mb-8">{s.text}</p>
+                                <div className="mt-auto flex items-center gap-2 text-[#166E41] font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                                    Mehr erfahren
+                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -145,20 +150,24 @@ const ServicesPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {[
-                            { title: 'Domizilbehandlungen', icon: 'home', text: 'Die Therapie findet direkt bei Ihnen zu Hause, im Pflegeheim oder in einer Einrichtung statt. Einfach, sicher und ohne zusätzlichen Aufwand.' },
-                            { title: 'Unterstützung für Angehörige', icon: 'volunteer_activism', text: 'Wir beraten und unterstützen Angehörige im Umgang mit alltäglichen Pflegesituationen – für sichere Bewegungsabläufe und ergonomisches Arbeiten.' },
-                            { title: 'Alltagstraining', icon: 'settings_accessibility', text: 'Wir trainieren Bewegungen direkt im realen Umfeld – wie Aufstehen, Gehen oder alltägliche Abläufe, für eine langfristige Integration in den Alltag.' },
-                            { title: 'Individuelle Therapieplanung', icon: 'event_note', text: 'Jede Behandlung wird individuell auf Ihre Situation, Ihre Ziele und Ihre Lebensumstände abgestimmt – für eine nachhaltige und wirksame Therapie.' }
+                            { id: 'domizilbehandlungen', title: 'Domizilbehandlungen', icon: 'home', text: 'Die Therapie findet direkt bei Ihnen zu Hause, im Pflegeheim oder in einer Einrichtung statt. Einfach, sicher und ohne zusätzlichen Aufwand.' },
+                            { id: 'unterstuetzung-fuer-angehoerige', title: 'Unterstützung für Angehörige', icon: 'volunteer_activism', text: 'Wir beraten und unterstützen Angehörige im Umgang mit alltäglichen Pflegesituationen – für sichere Bewegungsabläufe und ergonomisches Arbeiten.' },
+                            { id: 'alltagstraining', title: 'Alltagstraining', icon: 'settings_accessibility', text: 'Wir trainieren Bewegungen direkt im realen Umfeld – wie Aufstehen, Gehen oder alltägliche Abläufe, für eine langfristige Integration in den Alltag.' },
+                            { id: 'individuelle-therapieplanung', title: 'Individuelle Therapieplanung', icon: 'event_note', text: 'Jede Behandlung wird individuell auf Ihre Situation, Ihre Ziele und Ihre Lebensumstände abgestimmt – für eine nachhaltige und wirksame Therapie.' }
                         ].map((s, i) => (
-                            <div key={i} className="flex gap-8 p-10 rounded-[3rem] bg-slate-50 border border-transparent hover:border-[#166E41]/10 hover:bg-white hover:shadow-xl transition-all duration-500">
-                                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-[#166E41]">
+                            <Link key={i} to={`/services/${s.id}`} className="flex gap-8 p-10 rounded-[3rem] bg-slate-50 border border-transparent hover:border-[#166E41]/10 hover:bg-white hover:shadow-xl transition-all duration-500 group decoration-none">
+                                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-[#166E41] group-hover:bg-[#166E41] group-hover:text-white transition-all">
                                     <span className="material-symbols-outlined text-3xl font-black">{s.icon}</span>
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-black text-black mb-4 tracking-tight">{s.title}</h3>
                                     <p className="text-black/60 text-lg leading-relaxed font-semibold">{s.text}</p>
+                                    <div className="mt-6 flex items-center gap-2 text-[#166E41] font-black text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                                        Mehr erfahren
+                                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

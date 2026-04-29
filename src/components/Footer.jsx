@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../public/images/logo.png';
+const Logo = '/images/logo.png';
 
 const Footer = () => {
     return (
@@ -44,12 +44,12 @@ const Footer = () => {
                     <div className="lg:col-span-3">
                         <h5 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-6">Leistungen</h5>
                         <ul className="flex flex-col gap-5 text-sm font-semibold">
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Neurologische Erkrankungen</Link></li>
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Schwindel &amp; Gleichgewicht</Link></li>
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Onkologie &amp; Lymphologie</Link></li>
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Geriatrie &amp; Pflege</Link></li>
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Atemtherapie</Link></li>
-                            <li><Link to="/services" className="text-white/80 hover:text-white transition-colors block leading-tight">Chronische Wunden</Link></li>
+                            <li><Link to="/services/neurologische-erkrankungen" className="text-white/80 hover:text-white transition-colors block leading-tight">Neurologische Erkrankungen</Link></li>
+                            <li><Link to="/services/schwindel-gleichgewicht" className="text-white/80 hover:text-white transition-colors block leading-tight">Schwindel &amp; Gleichgewicht</Link></li>
+                            <li><Link to="/services/onkologie-lymphologie" className="text-white/80 hover:text-white transition-colors block leading-tight">Onkologie &amp; Lymphologie</Link></li>
+                            <li><Link to="/services/geriatrie-pflege" className="text-white/80 hover:text-white transition-colors block leading-tight">Geriatrie &amp; Pflege</Link></li>
+                            <li><Link to="/services/atemtherapie" className="text-white/80 hover:text-white transition-colors block leading-tight">Atemtherapie</Link></li>
+                            <li><Link to="/services/chronische-wunden" className="text-white/80 hover:text-white transition-colors block leading-tight">Chronische Wunden</Link></li>
                         </ul>
                     </div>
 
@@ -112,7 +112,7 @@ const Footer = () => {
 
                 <div className="mt-12 text-center">
                     <p className="text-[9px] font-black uppercase tracking-[0.4em] text-white/15">
-                        Designed and developed by <a href="https://techtidecorporate.com/" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors">TechTide Corporate LLP - Lahore, Pakistan</a>
+                        Designed and developed by <a href="https://techtidecorporate.com/" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors">TechTide Corporate LLP</a>
                     </p>
                 </div>
 

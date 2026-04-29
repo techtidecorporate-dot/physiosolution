@@ -1,6 +1,6 @@
 import React from 'react';
-import ConceptHeroImage from '../../public/images/Concept Hero.webp'
-import ConceptImage from '../../public/images/Concept Image.webp'
+const ConceptHeroImage = '/images/Concept Hero.webp'
+const ConceptImage = '/images/Concept Image.webp'
 
 const ConceptPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import SupportImage from '../../public/images/professional_care.webp'
+const SupportImage = '/images/professional_care.webp'
 const ForRelatives = () => {
     return (
         <section id="relatives" className="bg-white py-32 scroll-mt-20">

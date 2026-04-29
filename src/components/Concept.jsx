@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ConceptImage from '../../public/images/Concept home.webp'
+const ConceptImage = '/images/Concept home.webp'
 
 const Concept = () => {
   return (

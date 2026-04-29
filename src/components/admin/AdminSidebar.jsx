@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDashboard, Calendar, Mail, LogOut } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Logo from '../../../public/images/logo.png';
+const Logo = '/images/logo.png';
 
 const sidebarLinks = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },

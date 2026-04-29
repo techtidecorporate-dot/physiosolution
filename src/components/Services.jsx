@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     return (
@@ -27,16 +28,14 @@ const Services = () => {
 
                     {/* Service Card Component Wrapper */}
                     {[
-                        { title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Gangbild, Gleichgewicht und Selbstständigkeit bei Schlaganfall, Parkinson oder MS.' },
-                        { title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Entlastung bei Lymphödemen durch manuelle Lymphdrainage und Belastungsaufbau.' },
-                        { title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Verbesserte Atemmechanik und Belastbarkeit bei COPD, Asthma oder Post-COVID.' },
-                        { title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Mobilitätserhalt und Sturzprophylaxe bei Altersgebrechlichkeit oder Pflegebedarf.' },
-                        { title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Sicherheit bei Lagerungsschwindel, Gangunsicherheit und vestibulären Störungen.' },
-                        { title: 'Chronische Wunden', icon: 'healing', text: 'Begleitende Physiotherapie zur Förderung der Durchblutung und Alltagsmobilität.' }
+                        { id: 'neurologische-erkrankungen', title: 'Neurologische Erkrankungen', icon: 'neurology', text: 'Gangbild, Gleichgewicht und Selbstständigkeit bei Schlaganfall, Parkinson oder MS.' },
+                        { id: 'onkologie-lymphologie', title: 'Onkologie & Lymphologie', icon: 'clinical_notes', text: 'Entlastung bei Lymphödemen durch manuelle Lymphdrainage und Belastungsaufbau.' },
+                        { id: 'atemtherapie', title: 'Atemtherapie', icon: 'respiratory_rate', text: 'Verbesserte Atemmechanik und Belastbarkeit bei COPD, Asthma oder Post-COVID.' },
+                        { id: 'geriatrie-pflege', title: 'Geriatrie & Pflege', icon: 'elderly', text: 'Mobilitätserhalt und Sturzprophylaxe bei Altersgebrechlichkeit oder Pflegebedarf.' },
+                        { id: 'schwindel-gleichgewicht', title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Sicherheit bei Lagerungsschwindel, Gangunsicherheit und vestibulären Störungen.' },
+                        { id: 'chronische-wunden', title: 'Chronische Wunden', icon: 'healing', text: 'Begleitende Physiotherapie zur Förderung der Durchblutung und Alltagsmobilität.' }
                     ].map((service, index) => (
-                        <div key={index} className="group relative bg-[#f8faf9] p-10 rounded-[2.5rem] border border-slate-100 hover:border-[#22BB11]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#166E41]/10 transition-all duration-500 overflow-hidden">
-
-                            {/* Accent Circle */}
+                        <Link key={index} to={`/services/${service.id}`} className="group relative bg-[#f8faf9] p-10 rounded-[2.5rem] border border-slate-100 hover:border-[#22BB11]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#166E41]/10 transition-all duration-500 overflow-hidden decoration-none">
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#22BB11]/5 rounded-full group-hover:scale-150 transition-all duration-700"></div>
 
                             <div className="relative z-10">
@@ -50,14 +49,18 @@ const Services = () => {
                                     {service.title}
                                 </h3>
 
-                                <p className="text-black/60 text-base leading-relaxed font-medium">
+                                <p className="text-black/60 text-base leading-relaxed font-medium mb-12">
                                     {service.text}
                                 </p>
+
+                                <div className="flex items-center gap-2 text-[#166E41] font-black text-xs uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all">
+                                    Mehr erfahren
+                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                </div>
                             </div>
 
-                            {/* Bottom Highlight */}
                             <div className="absolute bottom-0 left-0 w-full h-1.5 bg-[#22BB11] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                        </div>
+                        </Link>
                     ))}
 
                 </div>

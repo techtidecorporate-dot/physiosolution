@@ -1,6 +1,6 @@
 import React from 'react';
-import FamilyImage from '../../public/images/Family.webp'
-import PhysioImage from '../../public/images/physio Integrating.jpg'
+const FamilyImage = '/images/Family.webp'
+const PhysioImage = '/images/physio Integrating.jpg'
 
 const RelativesPage = () => {
     return (

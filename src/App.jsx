@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import ImprintPage from './pages/ImprintPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -61,6 +62,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
               <Route path="/concept" element={<ConceptPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/for-relatives" element={<RelativesPage />} />

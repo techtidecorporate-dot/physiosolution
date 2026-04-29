@@ -6,18 +6,18 @@ const ServicesPage = () => {
         <div className="bg-white text-black font-manrope antialiased overflow-hidden">
 
             {/* Elite Hero - Massive Impact and Gradients */}
-            <section className="relative py-24 px-8 max-w-7xl mx-auto">
+            <section className="relative py-16 md:py-24 px-6 md:px-8 max-w-7xl mx-auto">
                 <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-[#22BB11]/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/4 -z-10"></div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                     <div className="relative z-10">
                         <span className="text-[#166E41] font-black text-xs tracking-[0.5em] uppercase mb-10 flex items-center gap-6">
                             Fachbereiche
                         </span>
-                        <h1 className="text-5xl lg:text-8xl font-black tracking-tighter text-black leading-[0.9] mb-12">
+                        <h1 className="text-4xl md:text-5xl lg:text-8xl font-black tracking-tighter text-black leading-[0.9] mb-12">
                             LEISTUNGEN.
                         </h1>
-                        <p className="text-black/70 text-xl lg:text-2xl leading-relaxed max-w-xl mb-14 font-medium italic border-l-4 border-[#22BB11] pl-8">
+                        <p className="text-black/70 text-lg md:text-xl lg:text-2xl leading-relaxed max-w-xl mb-14 font-medium italic border-l-4 border-[#22BB11] pl-8">
                             Unsere Leistungen orientieren sich nicht nur an Diagnosen, sondern vor allem an den Anforderungen des Alltags. Ziel ist es, Sicherheit, Selbstständigkeit und Beweglichkeit in Ihrem gewohnten Umfeld gezielt zu verbessern.
                         </p>
                         <div className="flex flex-wrap gap-8">
@@ -45,9 +45,9 @@ const ServicesPage = () => {
             </section>
 
             {/* Strategy / Methodology Section */}
-            <section className="py-40 bg-slate-50 relative overflow-hidden">
+            <section className="py-20 md:py-40 bg-slate-50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
                         <div className="order-2 lg:order-1">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 relative">
                                 <div className="absolute inset-0 bg-[#22BB11]/20 blur-[100px] -z-10"></div>
@@ -79,11 +79,11 @@ const ServicesPage = () => {
                         </div>
                         <div className="order-1 lg:order-2">
                             <span className="text-[#166E41] font-black text-xs tracking-[0.3em] uppercase block mb-8">Methodik</span>
-                            <h2 className="text-5xl lg:text-6xl font-black text-black tracking-tighter leading-[0.95] mb-10">Unser strukturierter <br />Weg zum Ziel.</h2>
-                            <p className="text-black/60 text-lg leading-relaxed font-semibold mb-10">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black tracking-tighter leading-[0.95] mb-10">Unser strukturierter <br />Weg zum Ziel.</h2>
+                            <p className="text-black/60 text-base md:text-lg leading-relaxed font-semibold mb-10">
                                 Wir begleiten Sie mit einem klaren, wissenschaftlich fundierten Prozess. Von der ersten Analyse bis zur langfristigen Sicherung Ihrer Ergebnisse steht Ihre Individualität im Fokus.
                             </p>
-                            <div className="flex items-center gap-6 p-6 border-2 border-[#166E41]/10 rounded-[2.5rem]">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 border-2 border-[#166E41]/10 rounded-[2.5rem] text-center sm:text-left">
                                 <div className="w-16 h-16 rounded-2xl bg-[#166E41] flex items-center justify-center shrink-0">
                                     <span className="material-symbols-outlined text-white text-3xl font-black">medical_services</span>
                                 </div>
@@ -97,12 +97,12 @@ const ServicesPage = () => {
             </section>
 
             {/* Core Services Section */}
-            <section className="bg-[#166E41] py-32 px-8 relative overflow-hidden">
+            <section className="bg-[#166E41] py-20 md:py-32 px-6 md:px-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 blur-[150px] rounded-full -translate-y-1/3 translate-x-1/3"></div>
 
-                <div className="max-w-7xl mx-auto relative z-10 text-center mb-32">
-                    <span className="text-white/60 font-black text-xs tracking-[0.5em] uppercase block mb-12">Spezialisierungen</span>
-                    <h2 className="text-5xl lg:text-8xl font-black text-white tracking-tighter leading-none">
+                <div className="max-w-7xl mx-auto relative z-10 text-center mb-16 md:mb-32">
+                    <span className="text-white/60 font-black text-xs tracking-[0.5em] uppercase block mb-8 md:mb-12">Spezialisierungen</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-8xl font-black text-white tracking-tighter leading-none">
                         Medizinische <br />
                         <span className="text-[#50CB61]">Schwerpunkte.</span>
                     </h2>
@@ -118,14 +118,14 @@ const ServicesPage = () => {
                             { id: 'schwindel-gleichgewicht', title: 'Schwindel & Gleichgewicht', icon: 'balance', text: 'Durch gezielte Therapie verbessern wir Gleichgewicht, Orientierung und Koordination, um wieder mehr Stabilität und Sicherheit im Alltag zu ermöglichen.' },
                             { id: 'chronische-wunden', title: 'Chronische Wunden', icon: 'healing', text: 'Bei chronischen Wunden unterstützen wir den Heilungsprozess durch gezielte Bewegungsförderung und die Verbesserung der Durchblutung.' }
                         ].map((s, i) => (
-                            <Link key={i} to={`/services/${s.id}`} className="group bg-white p-10 rounded-[3rem] hover:shadow-2xl hover:shadow-black/40 transition-all duration-700 relative flex flex-col h-full transform hover:-translate-y-2 decoration-none">
-                                <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-[#166E41] transition-all duration-500 shadow-inner">
-                                    <span className="material-symbols-outlined text-[#166E41] group-hover:text-white text-3xl transition-colors">
+                            <Link key={i} to={`/services/${s.id}`} className="group bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:shadow-2xl hover:shadow-black/40 transition-all duration-700 relative flex flex-col h-full transform hover:-translate-y-2 decoration-none">
+                                <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-[#166E41] transition-all duration-500 shadow-inner">
+                                    <span className="material-symbols-outlined text-[#166E41] group-hover:text-white text-2xl md:text-3xl transition-colors">
                                         {s.icon}
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-black text-black mb-6 leading-tight tracking-tight">{s.title}</h3>
-                                <p className="text-black/60 text-base leading-relaxed font-bold mb-8">{s.text}</p>
+                                <h3 className="text-xl md:text-2xl font-black text-black mb-4 md:mb-6 leading-tight tracking-tight">{s.title}</h3>
+                                <p className="text-black/60 text-sm md:text-base leading-relaxed font-bold mb-8">{s.text}</p>
                                 <div className="mt-auto flex items-center gap-2 text-[#166E41] font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
                                     Mehr erfahren
                                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -137,31 +137,31 @@ const ServicesPage = () => {
             </section>
 
             {/* Weitere Leistungen Section */}
-            <section className="py-32 px-8 bg-white relative overflow-hidden">
+            <section className="py-20 md:py-32 px-6 md:px-8 bg-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
+                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-24 gap-12">
                         <div className="max-w-2xl">
-                            <span className="text-[#166E41] font-black text-xs tracking-[0.4em] uppercase block mb-8">Ergänzende Angebote</span>
-                            <h2 className="text-5xl lg:text-7xl font-black text-black tracking-tighter leading-[0.95]">
+                            <span className="text-[#166E41] font-black text-xs tracking-[0.4em] uppercase block mb-6 md:mb-8">Ergänzende Angebote</span>
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-black tracking-tighter leading-[0.95]">
                                 Weitere <br /><span className="text-[#166E41]">Leistungen.</span>
                             </h2>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                         {[
                             { id: 'domizilbehandlungen', title: 'Domizilbehandlungen', icon: 'home', text: 'Die Therapie findet direkt bei Ihnen zu Hause, im Pflegeheim oder in einer Einrichtung statt. Einfach, sicher und ohne zusätzlichen Aufwand.' },
                             { id: 'unterstuetzung-fuer-angehoerige', title: 'Unterstützung für Angehörige', icon: 'volunteer_activism', text: 'Wir beraten und unterstützen Angehörige im Umgang mit alltäglichen Pflegesituationen – für sichere Bewegungsabläufe und ergonomisches Arbeiten.' },
                             { id: 'alltagstraining', title: 'Alltagstraining', icon: 'settings_accessibility', text: 'Wir trainieren Bewegungen direkt im realen Umfeld – wie Aufstehen, Gehen oder alltägliche Abläufe, für eine langfristige Integration in den Alltag.' },
                             { id: 'individuelle-therapieplanung', title: 'Individuelle Therapieplanung', icon: 'event_note', text: 'Jede Behandlung wird individuell auf Ihre Situation, Ihre Ziele und Ihre Lebensumstände abgestimmt – für eine nachhaltige und wirksame Therapie.' }
                         ].map((s, i) => (
-                            <Link key={i} to={`/services/${s.id}`} className="flex gap-8 p-10 rounded-[3rem] bg-slate-50 border border-transparent hover:border-[#166E41]/10 hover:bg-white hover:shadow-xl transition-all duration-500 group decoration-none">
-                                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-[#166E41] group-hover:bg-[#166E41] group-hover:text-white transition-all">
-                                    <span className="material-symbols-outlined text-3xl font-black">{s.icon}</span>
+                            <Link key={i} to={`/services/${s.id}`} className="flex flex-col sm:flex-row gap-6 md:gap-8 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-slate-50 border border-transparent hover:border-[#166E41]/10 hover:bg-white hover:shadow-xl transition-all duration-500 group decoration-none">
+                                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-[#166E41] group-hover:bg-[#166E41] group-hover:text-white transition-all">
+                                    <span className="material-symbols-outlined text-2xl md:text-3xl font-black">{s.icon}</span>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-black text-black mb-4 tracking-tight">{s.title}</h3>
-                                    <p className="text-black/60 text-lg leading-relaxed font-semibold">{s.text}</p>
+                                    <h3 className="text-xl md:text-2xl font-black text-black mb-4 tracking-tight">{s.title}</h3>
+                                    <p className="text-black/60 text-base md:text-lg leading-relaxed font-semibold">{s.text}</p>
                                     <div className="mt-6 flex items-center gap-2 text-[#166E41] font-black text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
                                         Mehr erfahren
                                         <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -174,20 +174,20 @@ const ServicesPage = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-48 px-8 bg-[#f8faf9] text-center relative overflow-hidden">
+            <section className="py-24 md:py-48 px-6 md:px-8 bg-[#f8faf9] text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto relative z-10">
-                    <h2 className="text-5xl lg:text-8xl font-black text-black tracking-tighter leading-none mb-16">
+                    <h2 className="text-4xl md:text-5xl lg:text-8xl font-black text-black tracking-tighter leading-none mb-12 md:mb-16">
                         Bereit für den <br /><span className="text-[#166E41]">ersten Schritt?</span>
                     </h2>
-                    <div className="flex flex-wrap justify-center gap-10">
-                        <a href="/book-visit" className="bg-[#166E41] text-white px-14 py-7 rounded-[2rem] font-black text-xl shadow-2xl hover:scale-105 transition-all">
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+                        <a href="/book-visit" className="bg-[#166E41] text-white px-8 md:px-14 py-4 md:py-7 rounded-2xl md:rounded-[2rem] font-black text-lg md:text-xl shadow-2xl hover:scale-105 transition-all">
                             Termin vereinbaren
                         </a>
-                        <div className="flex items-center gap-6">
-                            <div className="w-14 h-14 rounded-full border-2 border-[#166E41] flex items-center justify-center">
-                                <span className="material-symbols-outlined text-[#166E41] font-black">call</span>
+                        <div className="flex items-center gap-4 md:gap-6">
+                            <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border-2 border-[#166E41] flex items-center justify-center">
+                                <span className="material-symbols-outlined text-[#166E41] font-black text-xl md:text-2xl">call</span>
                             </div>
-                            <a href="tel:0783365540" className="text-3xl font-black text-black tracking-tighter">078 336 55 40</a>
+                            <a href="tel:0783365540" className="text-2xl md:text-3xl font-black text-black tracking-tighter">078 336 55 40</a>
                         </div>
                     </div>
                 </div>

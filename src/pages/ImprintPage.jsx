@@ -122,7 +122,7 @@ const ImprintPage = () => {
                 Die auf dieser Website verwendeten Inhalte stammen aus rechtmässig nutzbaren Quellen. Sofern Inhalte durch externe Dienstleister erstellt wurden, erfolgte dies auf deren fachliche Verantwortung. PhysioHealth GmbH behält sich bei Beanstandungen durch Dritte die unverzügliche Entfernung der betroffenen Inhalte sowie sämtliche Rückgriffsrechte gegenüber dem verantwortlichen Dienstleister vor.
               </p>
               <p className="mt-4 text-black font-bold">Hinweis an beauftragte Design- und Medienpartner:</p>
-              <p className="italic">[DESIGNFIRMA: Name, Anschrift]</p>
+              <p className="italic font-bold text-black/90">Design & Realisierung: <a href="https://www.raynovatech.com" target="_blank" rel="noopener noreferrer" className="text-[#72B922] hover:underline transition-all">RayNova Tech</a></p>
             </div>
           </div>
 

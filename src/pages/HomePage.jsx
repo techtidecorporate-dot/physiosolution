@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
-import Concept from '../components/Concept';
-import ForRelatives from '../components/ForRelatives';
-import FAQ from '../components/FAQ';
+
+const Services = lazy(() => import('../components/Services'));
+const Concept = lazy(() => import('../components/Concept'));
+const ForRelatives = lazy(() => import('../components/ForRelatives'));
+const FAQ = lazy(() => import('../components/FAQ'));
 
 const HomePage = () => {
     return (
         <>
             <Hero />
-            <Concept />
-            <Services />
-            <ForRelatives />
-            <FAQ />
+            <Suspense fallback={<div className="h-40" />}>
+                <Concept />
+                <Services />
+                <ForRelatives />
+                <FAQ />
+            </Suspense>
         </>
     );
 };
